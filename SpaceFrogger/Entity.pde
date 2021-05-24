@@ -1,9 +1,5 @@
 public class Entity{
-  public double x;
-  public double y;
-  public double dx;
-  public double dy;
-  public double radius;
+  public double x,y,dx,dy,radius;
   
   public double getx(){
     return x;
@@ -21,7 +17,7 @@ public class Entity{
     return dy;
   }
   
-  public double getradius(){
+  public double getRadius(){
     return radius;
   }
 }

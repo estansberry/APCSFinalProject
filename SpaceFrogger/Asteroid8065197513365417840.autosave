@@ -1,0 +1,12 @@
+public class Asteroid extends Entity{
+  private int hp;
+  public Asteroid(){
+     hp = 3;
+  }
+  public int gethp(){
+     return hp;
+  }
+  public void move(){
+     
+  }
+}
