@@ -8,5 +8,5 @@ A frog stranded in space needs to make his way back to his froggy home planet. T
 Link to Prototype:
 https://docs.google.com/document/d/170Zhcxiy1f5RUTc2yg8nOsAyw1jsenJ-h1eg3fg3TxA/edit?usp=sharing
 
-Deadlog:
+Deadlog: /n
 5/24/21 - Elizabeth - I created all of the classes and individual files, basically just the skeleton of the program.
