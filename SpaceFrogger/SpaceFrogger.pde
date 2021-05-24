@@ -1,2 +1,5 @@
-public class SpaceFrogger{
+public void setup(){
+}
+  
+public void run(){
 }
