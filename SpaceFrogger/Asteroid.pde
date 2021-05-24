@@ -7,6 +7,7 @@ public class Asteroid extends Entity{
    dx = DX;
    dy = DY;
    radius = rad;
+   hp = 3;
   }
   
   public int gethp(){
