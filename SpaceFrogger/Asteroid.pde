@@ -1,7 +1,7 @@
 public class Asteroid extends Entity{
   public int hp;
   
-  public Asteroid(double X, double Y, double DX, double DY, double rad){
+  public Asteroid(double X,double Y,double DX,double DY,double rad){
    x = X;
    y = Y;
    dx = DX;

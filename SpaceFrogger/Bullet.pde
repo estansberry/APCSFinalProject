@@ -1,17 +1,29 @@
 public class Bullet extends Entity{
-  //some stuff
-  public void move(){
+  public Bullet(double X,double Y,double DX,double DY,double rad){
+   x = X;
+   y = Y;
+   dx = DX;
+   dy = DY;
+   radius = rad;
   }
 }
 
 public class FBullet extends Bullet{
-  //other stuff
+  public FBullet(double X,double Y,double DX,double DY,double rad){
+   super(X,Y,DX,DY,rad);
+  }
   public void move(){
+    //Amount is subject to change
+    this.y -= 10;
   }
 }
 
 public class SBullet extends Bullet{
-  //other stuff
+  public SBullet(double X,double Y,double DX,double DY,double rad){
+   super(X,Y,DX,DY,rad);
+  }
   public void move(){
+    //Amount is subject to change
+    this.y += 10;
   }
 }
