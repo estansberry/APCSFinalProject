@@ -9,8 +9,7 @@ Link to Prototype:
 https://docs.google.com/document/d/170Zhcxiy1f5RUTc2yg8nOsAyw1jsenJ-h1eg3fg3TxA/edit?usp=sharing
 
 Elizabeth's Deadlog: <br/>
-5/24/21 - I created all of the classes and individual files, basically just the skeleton of the program. <br/>
-5/24/21 - I added a few new methods that we discussed in class.
+5/24/21 - I created all of the classes and individual files, basically just the skeleton of the program, and then I added a few new methods that we discussed in class.
 
 Aidan's Deadlog: <br/>
 
