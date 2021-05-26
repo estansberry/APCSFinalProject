@@ -37,5 +37,8 @@ public class Frog extends Entity{
     this.y += 10;
   }
   
+  public void display(){
+    
+  }
   
 }

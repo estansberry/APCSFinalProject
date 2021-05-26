@@ -1,13 +1,15 @@
 public class Asteroid extends Entity{
   public int hp;
+  public color c;
   
-  public Asteroid(double X,double Y,double DX,double DY,double rad){
+  public Asteroid(double X,double Y,double DX,double DY,double rad,color col){
    x = X;
    y = Y;
    dx = DX;
    dy = DY;
    radius = rad;
    hp = 3;
+   c = col;
   }
   
   public int gethp(){
@@ -17,5 +19,9 @@ public class Asteroid extends Entity{
   public void move(){
     //Amount is subject to change
     this.x -= 10;
+  }
+  
+  public void display(){
+    
   }
 }
