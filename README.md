@@ -12,5 +12,5 @@ Elizabeth's Deadlog: <br/>
 5/24/21 - I created all of the classes and individual files, basically just the skeleton of the program, and then I added a few new methods that we discussed in class.
 
 Aidan's Deadlog: <br/>
-5/24/21 - I created the constructors for each of the classes and then wrote some barebones code for the move methods in each class.
+5/24/21 - I created the constructors for each of the classes and then wrote some barebones code for the move methods in each class. <br/>
 5/26/21 - I updated all the double variables to float and starting working on the SpaceFrogger code: I instantiated some ArrayLists for the different classes, wrote the keyPressed method, and starting working on the setup and draw methods.
