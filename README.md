@@ -12,4 +12,4 @@ Elizabeth's Deadlog: <br/>
 5/24/21 - I created all of the classes and individual files, basically just the skeleton of the program, and then I added a few new methods that we discussed in class.
 
 Aidan's Deadlog: <br/>
-
+5/24/21 - I created the constructors for each of the classes and then wrote some barebones code for the move methods in each class.
