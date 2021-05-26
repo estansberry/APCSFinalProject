@@ -1,7 +1,7 @@
 public class Frog extends Entity{
   public int hp;
   
-  public Frog(double X,double Y,double DX,double DY,double rad){
+  public Frog(float X,float Y,float DX,float DY,float rad){
    x = X;
    y = Y;
    dx = DX;
@@ -38,7 +38,6 @@ public class Frog extends Entity{
   }
   
   public void display(){
-    
   }
   
 }

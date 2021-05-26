@@ -1,5 +1,5 @@
 public class Ship extends Entity{
-  public Ship(double X,double Y,double DX,double DY,double rad){
+  public Ship(float X,float Y,float DX,float DY,float rad){
    x = X;
    y = Y;
    dx = DX;

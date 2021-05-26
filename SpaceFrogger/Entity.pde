@@ -1,23 +1,23 @@
 public class Entity{
-  public double x,y,dx,dy,radius;
+  public float x,y,dx,dy,radius;
   
-  public double getx(){
+  public float getx(){
     return x;
   }
   
-  public double gety(){
+  public float gety(){
     return y;
   }
   
-  public double getdx(){
+  public float getdx(){
     return dx;
   }
   
-  public double getdy(){
+  public float getdy(){
     return dy;
   }
   
-  public double getRadius(){
+  public float getRadius(){
     return radius;
   }
 }

@@ -1,6 +1,6 @@
 public class Bullet extends Entity{
   public color c;
-  public Bullet(double X,double Y,double DX,double DY,double rad, color col){
+  public Bullet(float X,float Y,float DX,float DY,float rad, color col){
    x = X;
    y = Y;
    dx = DX;
@@ -11,7 +11,7 @@ public class Bullet extends Entity{
 }
 
 public class FBullet extends Bullet{
-  public FBullet(double X,double Y,double DX,double DY,double rad,color col){
+  public FBullet(float X,float Y,float DX,float DY,float rad,color col){
    super(X,Y,DX,DY,rad,col);
   }
   public void move(){
@@ -24,7 +24,7 @@ public class FBullet extends Bullet{
 }
 
 public class SBullet extends Bullet{
-  public SBullet(double X,double Y,double DX,double DY,double rad,color col){
+  public SBullet(float X,float Y,float DX,float DY,float rad,color col){
    super(X,Y,DX,DY,rad,col);
   }
   public void move(){
