@@ -9,7 +9,8 @@ Link to Prototype:
 https://docs.google.com/document/d/170Zhcxiy1f5RUTc2yg8nOsAyw1jsenJ-h1eg3fg3TxA/edit?usp=sharing
 
 Elizabeth's Deadlog: <br/>
-5/24/21 - I created all of the classes and individual files, basically just the skeleton of the program, and then I added a few new methods that we discussed in class.
+5/24/21 - I created all of the classes and individual files, basically just the skeleton of the program, and then I added a few new methods that we discussed in class. <br/>
+5/26/21 - I wrote the code for the forg's basic appearance and wrote a loop to add stars to the background. <br/>
 
 Aidan's Deadlog: <br/>
 5/24/21 - I created the constructors for each of the classes and then wrote some barebones code for the move methods in each class. <br/>
