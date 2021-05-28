@@ -15,6 +15,8 @@ public void setup(){
     ellipse(i.floatValue(), j.floatValue(), 5, 5);
     starcount++;
   }
+  user = new Frog(10,10);
+  user.display();
 }
   
 public void run(){

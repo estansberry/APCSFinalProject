@@ -16,7 +16,7 @@ public class FBullet extends Bullet{
   }
   public void move(){
     //Amount is subject to change
-    this.y -= 10;
+    this.y -= dy;
   }
   public void display(){
     
@@ -29,7 +29,7 @@ public class SBullet extends Bullet{
   }
   public void move(){
     //Amount is subject to change
-    this.y += 10;
+    this.y += dy;
   }
   public void display(){
     

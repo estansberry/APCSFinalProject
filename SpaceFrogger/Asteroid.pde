@@ -18,7 +18,7 @@ public class Asteroid extends Entity{
   
   public void move(){
     //Amount is subject to change
-    this.x -= 10;
+    this.x -= dx;
   }
   
   public void display(){

@@ -1,12 +1,12 @@
 public class Frog extends Entity{
   public int hp;
   
-  public Frog(float X,float Y,float DX,float DY,float rad){
-   x = X;
-   y = Y;
+  public Frog(float DX,float DY){
+   x = 500;
+   y = 750;
    dx = DX;
    dy = DY;
-   radius = rad;
+   radius = 100;
    hp = 3;
   }
   
@@ -19,53 +19,50 @@ public class Frog extends Entity{
   
   public void moveRight(){
     //Amount is subject to change
-    this.x += 10;
+    this.x += dx;
   }
   
   public void moveLeft(){
     //Amount is subject to change
-    this.x -= 10;
+    this.x -= dx;
   }
   
   public void moveUp(){
     //Amount is subject to change
-    this.y -= 10;
+    this.y -= dy;
   }
   
   public void moveDown(){
     //Amount is subject to change
-    this.y += 10;
+    this.y += dy;
   }
   
   public void display(){
-    float officialrad = 100;
-    float x = 500;
-    float y = 750;
-    float radius = officialrad/2;
+    float bodyRadius = radius/2;
     fill(0, 0, 0, 0);
     ellipseMode(CENTER);
     rectMode(CENTER);
-    ellipse(x, y, officialrad, officialrad);
+    ellipse(x, y, radius, radius);
     stroke(#6B9371);
     fill(#6B9371);
     //head
-    ellipse(x, y - radius/2.4, radius/1.3, radius/1.6);
+    ellipse(x, y - bodyRadius/2.4, bodyRadius/1.3, bodyRadius/1.6);
     //body
-    ellipse(x, y, radius, radius);
+    ellipse(x, y, bodyRadius, bodyRadius);
     //legs
-    ellipse(x - radius/3, y + radius/3, radius/1.5, radius/1.5);
-    ellipse(x + radius/3, y + radius/3, radius/1.5, radius/1.5);
+    ellipse(x - bodyRadius/3, y + bodyRadius/3, bodyRadius/1.5, bodyRadius/1.5);
+    ellipse(x + bodyRadius/3, y + bodyRadius/3, bodyRadius/1.5, bodyRadius/1.5);
     //feet
-    rect(x - radius/2 - 1, y + radius/2 + 7, radius/1.5, radius/12);
-    rect(x + radius/2 + 1, y + radius/2 + 7, radius/1.5, radius/12);
-    rect(x - radius/2, y + radius/2, radius/1.5, radius/12);
-    rect(x + radius/2, y + radius/2, radius/1.5, radius/12);
-    rect(x - radius/2 + 1, y + radius/2 - 8, radius/1.5, radius/12);
-    rect(x + radius/2 - 1, y + radius/2 - 8, radius/1.5, radius/12);
+    rect(x - bodyRadius/2 - 1, y + bodyRadius/2 + 7, bodyRadius/1.5, bodyRadius/12);
+    rect(x + bodyRadius/2 + 1, y + bodyRadius/2 + 7, bodyRadius/1.5, bodyRadius/12);
+    rect(x - bodyRadius/2, y + bodyRadius/2, bodyRadius/1.5, bodyRadius/12);
+    rect(x + bodyRadius/2, y + bodyRadius/2, bodyRadius/1.5, bodyRadius/12);
+    rect(x - bodyRadius/2 + 1, y + bodyRadius/2 - 8, bodyRadius/1.5, bodyRadius/12);
+    rect(x + bodyRadius/2 - 1, y + bodyRadius/2 - 8, bodyRadius/1.5, bodyRadius/12);
     //helmet
     fill(225, 225, 225, 160);
     stroke(0);
-    ellipse(x, y - radius/1.75, radius/.9, radius/1.1);
+    ellipse(x, y - bodyRadius/1.75, bodyRadius/.9, bodyRadius/1.1);
   }
   
 }
