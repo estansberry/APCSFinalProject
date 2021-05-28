@@ -1,4 +1,4 @@
-public class Entity{
+abstract class Entity{
   public float x,y,dx,dy,radius;
   
   public float getx(){
