@@ -24,7 +24,10 @@ public void run(){
 }
 
 public void draw(){
-  
+  user.display();
+  fill(255);
+  textSize(20);
+  text("x: " + user.getx() + "\ny: " + user.gety(),0,20);
 }
 
 public void keyPressed(){
@@ -33,16 +36,16 @@ public void keyPressed(){
      user.shoot();
    }
    if(key == CODED){
-    if(key == UP){
+    if(keyCode == UP){
      user.moveUp(); 
     }
-    if(key == DOWN){
+    if(keyCode == DOWN){
      user.moveDown(); 
     }
-    if(key == RIGHT){
+    if(keyCode == RIGHT){
      user.moveRight(); 
     }
-    if(key == LEFT){
+    if(keyCode == LEFT){
      user.moveLeft(); 
     }
    }
