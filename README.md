@@ -15,4 +15,5 @@ Elizabeth's Deadlog: <br/>
 
 Aidan's Deadlog: <br/>
 5/24/21 - I created the constructors for each of the classes and then wrote some barebones code for the move methods in each class. <br/>
-5/26/21 - I updated all the double variables to float and starting working on the SpaceFrogger code: I instantiated some ArrayLists for the different classes, wrote the keyPressed method, and starting working on the setup and draw methods.
+5/26/21 - I updated all the double variables to float and starting working on the SpaceFrogger code: I instantiated some ArrayLists for the different classes, wrote the keyPressed method, and starting working on the setup and draw methods.  <br/>
+5/28/21 - Made entity an abstract class, fixed keyPressed, cleaned up Frog constructor and display variable names, and changed move methods to use dx and dy. <br/>
