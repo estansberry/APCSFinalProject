@@ -13,6 +13,7 @@ public void setup(){
     Double i = Double.valueOf(1000*Math.random());
     Double j = Double.valueOf(1000*Math.random());
     ellipse(i.floatValue(), j.floatValue(), 5, 5);
+    starcount++;
   }
 }
   
