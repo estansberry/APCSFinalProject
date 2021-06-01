@@ -15,7 +15,7 @@ public class Frog extends Entity{
   }
   
   public FBullet shoot(){
-    FBullet fresh = new FBullet(x,y,5,5,10,255);
+    FBullet fresh = new FBullet(x,y,10,10,10,255);
     return fresh;
   }
   
