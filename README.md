@@ -12,7 +12,7 @@ Elizabeth's Deadlog: <br/>
 5/24/21 - I created all of the classes and individual files, basically just the skeleton of the program, and then I added a few new methods that we discussed in class. <br/>
 5/26/21 - I wrote the code for the frog's basic appearance and wrote a loop to add stars to the background. <br/>
 5/28/21 - I fixed an issue with the background <br/>
-5/31/21 - I made a fix with the instantiation of our ArrayLists. <br/>
+5/31/21 - I made a fix with the instantiation of our ArrayLists, and added the code for the Alien spaceship. <br/>
 
 
 Aidan's Deadlog: <br/>
