@@ -52,13 +52,17 @@ public void draw(){
   else{
    //wormhole appears once all enemy ships are eliminated 
   }
-  /*if(!asteroids.isEmpty()){
+  if(!asteroids.isEmpty()){
     for(int i = 0; i < asteroids.size(); i++){
      Asteroid meteor = asteroids.get(i);
+     meteor.move();
      meteor.display();
-     
+     meteor.collide(frogBullets);
+     if(meteor.hp < 1){
+      asteroids.remove(i); 
+     }
     }
-  }*/
+  }
 }
 
 public void keyPressed(){

@@ -14,9 +14,6 @@ public class Ship extends Entity{
   
   public void display(){
     size(1000,1000);
-    //float radius = 75;
-    //float x = 500;
-    //float y = 200;
     ellipseMode(CENTER);
     rectMode(CENTER);
     fill(0, 0, 0, 0);

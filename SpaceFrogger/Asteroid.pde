@@ -25,7 +25,7 @@ public class Asteroid extends Entity{
     
   }
   
-  /*public void collide(ArrayList<FBullet> bullets){
+  public void collide(ArrayList<FBullet> bullets){
    for(int i = 0; i < bullets.size(); i++){
     FBullet holder = bullets.get(i);
     double distance = Math.sqrt(Math.pow((x - holder.x),2) + Math.pow((y - holder.y),2));
@@ -35,5 +35,5 @@ public class Asteroid extends Entity{
      bullets.remove(i);
     }
    } 
-  }*/
+  }
 }
