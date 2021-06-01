@@ -1,5 +1,5 @@
 public class Ship extends Entity{
-  //public boolean colliding;
+  public boolean colliding;
   
   public Ship(float DX,float DY){
    x = 500;
@@ -60,7 +60,7 @@ public class Ship extends Entity{
     ellipse(x, y + radius/3, radius/9, radius/9);
   }
   
-  /*public void collide(ArrayList<FBullet> bullets){
+  public void collide(ArrayList<FBullet> bullets){
     colliding = false;
     for(int i = 0; i < bullets.size(); i++){
      FBullet holder = bullets.get(i);
@@ -71,5 +71,5 @@ public class Ship extends Entity{
       bullets.remove(i);
      }
     }
-   }*/
+   }
 }

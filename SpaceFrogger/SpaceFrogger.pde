@@ -39,7 +39,7 @@ public void draw(){
      b.display();
     }
   }
-  /*if(!enemies.isEmpty()){
+  if(!enemies.isEmpty()){
     for(int i = 0; i < enemies.size(); i++){
      Ship enemy = enemies.get(i);
      enemy.display();
@@ -52,7 +52,7 @@ public void draw(){
   else{
    //wormhole appears once all enemy ships are eliminated 
   }
-  if(!asteroids.isEmpty()){
+  /*if(!asteroids.isEmpty()){
     for(int i = 0; i < asteroids.size(); i++){
      Asteroid meteor = asteroids.get(i);
      meteor.display();
