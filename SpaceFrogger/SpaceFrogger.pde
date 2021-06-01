@@ -1,8 +1,8 @@
-ArrayList<Asteroid> asteroids;
-ArrayList<Ship> enemies;
+ArrayList<Asteroid> asteroids = new ArrayList();
+ArrayList<Ship> enemies = new ArrayList();
 Frog user;
-ArrayList<FBullet> frogBullets;
-ArrayList<SBullet> enemyBullets;
+ArrayList<FBullet> frogBullets = new ArrayList();
+ArrayList<SBullet> enemyBullets = new ArrayList();
 
 public void setup(){
   size(1000,1000);
