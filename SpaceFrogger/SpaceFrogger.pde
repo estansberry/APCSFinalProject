@@ -11,6 +11,9 @@ public void setup(){
   stars.resize(width, height);
   image(stars, 0, 0);
   user = new Frog(10,10);
+  //Ship to test mechanics
+  Ship s = new Ship(5,5);
+  enemies.add(s);
   user.display();
 }
   
@@ -26,18 +29,41 @@ public void draw(){
   fill(255);
   textSize(20);
   text("x: " + user.getx() + "\ny: " + user.gety(),0,20);
-  if(frogBullets.isEmpty() == false){ 
+  if(!frogBullets.isEmpty()){ 
     for(int i = 0; i < frogBullets.size(); i++){
      FBullet b = frogBullets.get(i);
      b.move();
+     if(b.y < 0){
+      frogBullets.remove(i); 
+     }
      b.display();
     }
   }
+  /*if(!enemies.isEmpty()){
+    for(int i = 0; i < enemies.size(); i++){
+     Ship enemy = enemies.get(i);
+     enemy.display();
+     enemy.collide(frogBullets);
+     if(enemy.colliding){
+      enemies.remove(i); 
+     }
+    }
+  }
+  else{
+   //wormhole appears once all enemy ships are eliminated 
+  }
+  if(!asteroids.isEmpty()){
+    for(int i = 0; i < asteroids.size(); i++){
+     Asteroid meteor = asteroids.get(i);
+     meteor.display();
+     
+    }
+  }*/
 }
 
 public void keyPressed(){
   if(keyPressed){
-   if(key == ' '){
+   if(key == ' ' && frogBullets.size() <= 10){
      frogBullets.add(user.shoot());
    }
    if(key == CODED){
