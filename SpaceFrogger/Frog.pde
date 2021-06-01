@@ -67,4 +67,15 @@ public class Frog extends Entity{
     ellipse(x, y - bodyRadius/1.75, bodyRadius/.9, bodyRadius/1.1);
   }
   
+  public void collide(ArrayList<SBullet> bullets){
+   for(int i = 0; i < bullets.size(); i++){
+    SBullet holder = bullets.get(i);
+    double distance = Math.sqrt(Math.pow((x - holder.x),2) + Math.pow((y - holder.y),2));
+    double radii = radius + holder.radius;
+    if(distance < radii){
+     this.hp -= 1;
+     bullets.remove(i);
+    }
+   } 
+  }
 }

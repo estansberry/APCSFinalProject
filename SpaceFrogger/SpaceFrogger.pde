@@ -25,6 +25,10 @@ public void draw(){
   PImage stars = loadImage("stars.png");
   stars.resize(width, height);
   image(stars, 0, 0);
+  user.collide(enemyBullets);
+  if(user.hp < 1){
+   //Restart game
+  }
   user.display();
   fill(255);
   textSize(20);
