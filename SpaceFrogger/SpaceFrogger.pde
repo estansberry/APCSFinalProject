@@ -26,12 +26,19 @@ public void draw(){
   fill(255);
   textSize(20);
   text("x: " + user.getx() + "\ny: " + user.gety(),0,20);
+  if(frogBullets.isEmpty() == false){ 
+    for(int i = 0; i < frogBullets.size(); i++){
+     FBullet b = frogBullets.get(i);
+     b.move();
+     b.display();
+    }
+  }
 }
 
 public void keyPressed(){
   if(keyPressed){
    if(key == ' '){
-     user.shoot();
+     frogBullets.add(user.shoot());
    }
    if(key == CODED){
     if(keyCode == UP){

@@ -19,7 +19,9 @@ public class FBullet extends Bullet{
     this.y -= dy;
   }
   public void display(){
-    
+    noStroke();
+    fill(c);
+    ellipse(x,y,radius*2,radius*2);
   }
 }
 
