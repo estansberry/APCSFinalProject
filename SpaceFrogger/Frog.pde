@@ -21,22 +21,30 @@ public class Frog extends Entity{
   
   public void moveRight(){
     //Amount is subject to change
-    this.x += dx;
+    if(this.x + dx < width - radius/2){
+      this.x += dx;
+    }
   }
   
   public void moveLeft(){
     //Amount is subject to change
-    this.x -= dx;
+    if(this.x - dx > radius/2){
+      this.x -= dx;
+    }
   }
   
   public void moveUp(){
     //Amount is subject to change
-    this.y -= dy;
+    if(this.y - dy > radius/2){
+      this.y -= dy;
+    }
   }
   
   public void moveDown(){
     //Amount is subject to change
-    this.y += dy;
+    if(this.y + dy < height - radius/2){
+      this.y += dy;
+    }
   }
   
   public void display(){

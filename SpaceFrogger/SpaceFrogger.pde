@@ -54,7 +54,9 @@ public void draw(){
     }
   }
   else{
-   //wormhole appears once all enemy ships are eliminated 
+   //wormhole appears once all enemy ships are eliminated
+   
+   
   }
   if(!asteroids.isEmpty()){
     for(int i = 0; i < asteroids.size(); i++){
