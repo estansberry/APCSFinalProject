@@ -4,8 +4,16 @@ Frog user;
 ArrayList<FBullet> frogBullets = new ArrayList();
 ArrayList<SBullet> enemyBullets = new ArrayList();
 Wormhole hole = new Wormhole();
+int[] asteroidValues = new int[5];{
+ asteroidValues[0] = 400;
+ asteroidValues[1] = 450;
+ asteroidValues[2] = 500;
+ asteroidValues[3] = 550;
+ asteroidValues[4] = 600;
+}
 
 public void setup(){
+  frameRate(30);
   size(1000,1000); 
   background(0);
   PImage stars = loadImage("stars.png");
@@ -39,6 +47,13 @@ public void draw(){
   fill(255);
   textSize(20);
   text("x: " + user.getx() + "\ny: " + user.gety(),0,20);
+  int random = (int)Math.floor(Math.random()*(15-1+1)+1);
+  if(random == 1){
+    int place = (int)Math.floor(Math.random()*(4-0+1)+0);
+    int randomY = asteroidValues[place];
+    Asteroid holder = new Asteroid(randomY,10,25,color(128));
+    asteroids.add(holder);
+  }
   if(!frogBullets.isEmpty()){ 
     for(int i = 0; i < frogBullets.size(); i++){
      FBullet b = frogBullets.get(i);

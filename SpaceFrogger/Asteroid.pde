@@ -2,11 +2,10 @@ public class Asteroid extends Entity{
   public int hp;
   public color c;
   
-  public Asteroid(float X,float Y,float DX,float DY,float rad,color col){
-   x = X;
+  public Asteroid(float Y,float DX,float rad,color col){
+   x = 1000;
    y = Y;
    dx = DX;
-   dy = DY;
    radius = rad;
    hp = 3;
    c = col;
@@ -22,7 +21,9 @@ public class Asteroid extends Entity{
   }
   
   public void display(){
-    
+    noStroke();
+    fill(c);
+    ellipse(x,y,radius*2,radius*2);
   }
   
   public void collide(ArrayList<FBullet> bullets){
