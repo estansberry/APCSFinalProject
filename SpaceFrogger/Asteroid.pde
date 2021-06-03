@@ -3,7 +3,7 @@ public class Asteroid extends Entity{
   public color c;
   
   public Asteroid(float Y,float DX,float rad,color col){
-   x = 1000;
+   x = 1100;
    y = Y;
    dx = DX;
    radius = rad;

@@ -78,7 +78,6 @@ public void draw(){
     }
   }
   else{
-   //wormhole appears once all enemy ships are eliminated
    hole.display = true;
   }
   if(!asteroids.isEmpty()){
