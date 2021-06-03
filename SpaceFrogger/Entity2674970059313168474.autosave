@@ -1,6 +1,0 @@
-public class Entity{
-   private double x,y,dx,dy,radius;
-   public Entity(){
-   }
-   public doule 
-}
