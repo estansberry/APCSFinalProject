@@ -7,6 +7,7 @@ public class Ship extends Entity{
    dx = DX;
    dy = DY;
    radius = 50;
+   colliding = false;
   }
   
   public void shoot(){
@@ -63,7 +64,6 @@ public class Ship extends Entity{
   }
   
   public void collide(ArrayList<FBullet> bullets){
-    colliding = false;
     for(int i = 0; i < bullets.size(); i++){
      FBullet holder = bullets.get(i);
      double distance = Math.sqrt(Math.pow((x - holder.x),2) + Math.pow((y - holder.y),2));

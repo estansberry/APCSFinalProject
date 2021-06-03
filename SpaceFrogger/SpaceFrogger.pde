@@ -86,7 +86,7 @@ public void draw(){
      meteor.move();
      meteor.display();
      meteor.collide(frogBullets);
-     if(meteor.hp < 1){
+     if(meteor.colliding){
       asteroids.remove(i); 
      }
     }
