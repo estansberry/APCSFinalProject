@@ -6,55 +6,56 @@ public class Ship extends Entity{
    y = 200;
    dx = DX;
    dy = DY;
-   radius = 75;
+   radius = 50;
   }
   
   public void shoot(){
   }  
   
   public void display(){
+    int rad = 75;
     size(1000,1000);
     ellipseMode(CENTER);
     rectMode(CENTER);
     fill(0, 0, 0, 0);
-    ellipse(x, y, radius, radius);
+    ellipse(x, y, rad, rad);
     fill(#542A83);
     stroke(#542A83);
-    rect(x, y - radius/6, radius/2.75, radius*.6);
-    rect(x, y, radius*.9, radius/15);
-    rect(x, y, radius/7, radius*.8);
+    rect(x, y - rad/6, rad/2.75, rad*.6);
+    rect(x, y, rad*.9, rad/15);
+    rect(x, y, rad/7, rad*.8);
     //
     fill(#135F2B);
     stroke(#135F2B);
-    triangle(x - radius/5.5, y - radius/6, x - radius/5.5, y - radius/2, x - radius/2.75, y - radius/2);
-    triangle(x + radius/5.5, y - radius/6, x + radius/5.5, y - radius/2, x + radius/2.75, y - radius/2);
+    triangle(x - rad/5.5, y - rad/6, x - rad/5.5, y - rad/2, x - rad/2.75, y - rad/2);
+    triangle(x + rad/5.5, y - rad/6, x + rad/5.5, y - rad/2, x + rad/2.75, y - rad/2);
     //
     fill(225);
     stroke(#542A83);
-    ellipse(x - radius/5.5, y - radius/6 + radius*.3, radius/5, radius/5);
-    ellipse(x + radius/5.5, y - radius/6 + radius*.3, radius/5, radius/5);
+    ellipse(x - rad/5.5, y - rad/6 + rad*.3, rad/5, rad/5);
+    ellipse(x + rad/5.5, y - rad/6 + rad*.3, rad/5, rad/5);
     fill(0);
-    ellipse(x - radius/5.5, y - radius/6 + radius*.3, radius/15, radius/15);
-    ellipse(x + radius/5.5, y - radius/6 + radius*.3, radius/15, radius/15);
+    ellipse(x - rad/5.5, y - rad/6 + rad*.3, rad/15, rad/15);
+    ellipse(x + rad/5.5, y - rad/6 + rad*.3, rad/15, rad/15);
     //
     fill(225);
-    ellipse(x - radius/2.75, y - radius/6 + radius*.15, radius/5, radius/5);
-    ellipse(x + radius/2.75, y - radius/6 + radius*.15, radius/5, radius/5);
+    ellipse(x - rad/2.75, y - rad/6 + rad*.15, rad/5, rad/5);
+    ellipse(x + rad/2.75, y - rad/6 + rad*.15, rad/5, rad/5);
     fill(0);
-    ellipse(x - radius/2.75, y - radius/6 + radius*.15, radius/15, radius/15);
-    ellipse(x + radius/2.75, y - radius/6 + radius*.15, radius/15, radius/15);
+    ellipse(x - rad/2.75, y - rad/6 + rad*.15, rad/15, rad/15);
+    ellipse(x + rad/2.75, y - rad/6 + rad*.15, rad/15, rad/15);
     //
     fill(225);
-    ellipse(x - radius/3.5, y - radius/6 - radius*.05, radius/5, radius/5);
-    ellipse(x + radius/3.5, y - radius/6 - radius*.05, radius/5, radius/5);
+    ellipse(x - rad/3.5, y - rad/6 - rad*.05, rad/5, rad/5);
+    ellipse(x + rad/3.5, y - rad/6 - rad*.05, rad/5, rad/5);
     fill(0);
-    ellipse(x - radius/3.5, y - radius/6 - radius*.05, radius/15, radius/15);
-    ellipse(x + radius/3.5, y - radius/6 - radius*.05, radius/15, radius/15);
+    ellipse(x - rad/3.5, y - rad/6 - rad*.05, rad/15, rad/15);
+    ellipse(x + rad/3.5, y - rad/6 - rad*.05, rad/15, rad/15);
     //
     fill(225);
-    ellipse(x, y + radius/3, radius/3, radius/3);
+    ellipse(x, y + rad/3, rad/3, rad/3);
     fill(0);
-    ellipse(x, y + radius/3, radius/9, radius/9);
+    ellipse(x, y + rad/3, rad/9, rad/9);
   }
   
   public void collide(ArrayList<FBullet> bullets){

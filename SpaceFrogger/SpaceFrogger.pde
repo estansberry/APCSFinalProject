@@ -3,6 +3,7 @@ ArrayList<Ship> enemies = new ArrayList();
 Frog user;
 ArrayList<FBullet> frogBullets = new ArrayList();
 ArrayList<SBullet> enemyBullets = new ArrayList();
+Wormhole hole;
 
 public void setup(){
   size(1000,1000);
@@ -55,7 +56,8 @@ public void draw(){
   }
   else{
    //wormhole appears once all enemy ships are eliminated
-   
+   hole = new Wormhole();
+   hole.display();
    
   }
   if(!asteroids.isEmpty()){
