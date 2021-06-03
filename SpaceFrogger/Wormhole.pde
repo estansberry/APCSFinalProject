@@ -47,4 +47,13 @@ public class Wormhole extends Entity{
       }
     }
   }
+  
+  public boolean collide(Frog user){
+    double distance = Math.sqrt(Math.pow((x - user.x),2) + Math.pow((y - user.y),2));
+    double radii = radius + user.radius;
+    if(distance < radii){
+     return true;
+    }
+    return false;
+  }
 }
