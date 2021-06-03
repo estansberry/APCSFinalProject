@@ -7,7 +7,7 @@ public class Frog extends Entity{
    y = 750;
    dx = DX;
    dy = DY;
-   radius = 100;
+   radius = 50;
    hp = 3;
    display = true;
   }
@@ -50,11 +50,12 @@ public class Frog extends Entity{
   }
   
   public void display(){
-    float bodyRadius = radius/2;
+    float myRadius = 100;
+    float bodyRadius = myRadius/2;
     fill(0, 0, 0, 0);
     ellipseMode(CENTER);
     rectMode(CENTER);
-    ellipse(x, y, radius, radius);
+    ellipse(x, y, myRadius, myRadius);
     stroke(#6B9371);
     fill(#6B9371);
     //head
@@ -77,7 +78,7 @@ public class Frog extends Entity{
     ellipse(x, y - bodyRadius/1.75, bodyRadius/.9, bodyRadius/1.1);
   }
   
-  public void collide(ArrayList<SBullet> bullets){
+  public boolean bulletCollide(ArrayList<SBullet> bullets){
    for(int i = 0; i < bullets.size(); i++){
     SBullet holder = bullets.get(i);
     double distance = Math.sqrt(Math.pow((x - holder.x),2) + Math.pow((y - holder.y),2));
@@ -85,7 +86,22 @@ public class Frog extends Entity{
     if(distance < radii){
      this.hp -= 1;
      bullets.remove(i);
+     return true;
     }
-   } 
+   }
+   return false;
+  }
+  
+  public boolean asteroidCollide(ArrayList<Asteroid> asteroids){
+    for(int i = 0; i < asteroids.size(); i++){
+    Asteroid holder = asteroids.get(i);
+    double distance = Math.sqrt(Math.pow((x - holder.x),2) + Math.pow((y - holder.y),2));
+    double radii = radius + holder.radius;
+    if(distance < radii){
+     this.hp -= 1;
+     return true;
+    }
+   }
+   return false;
   }
 }

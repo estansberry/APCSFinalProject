@@ -37,7 +37,10 @@ public void draw(){
   PImage stars = loadImage("stars.png");
   stars.resize(width, height);
   image(stars, 0, 0);
-  user.collide(enemyBullets);
+  if(user.bulletCollide(enemyBullets) || user.asteroidCollide(asteroids)){
+    user.x = 500;
+    user.y = 750;
+  }
   if(user.hp < 1){
    //Restart game
   }
@@ -46,12 +49,12 @@ public void draw(){
   }
   fill(255);
   textSize(20);
-  text("x: " + user.getx() + "\ny: " + user.gety(),0,20);
+  text("x: " + user.getx() + "\ny: " + user.gety() + "\nhp: " + user.gethp(),0,20);
   int random = (int)Math.floor(Math.random()*(15-1+1)+1);
   if(random == 1){
     int place = (int)Math.floor(Math.random()*(4-0+1)+0);
     int randomY = asteroidValues[place];
-    Asteroid holder = new Asteroid(randomY,10,25,color(128));
+    Asteroid holder = new Asteroid(randomY,8,25,color(128));
     asteroids.add(holder);
   }
   if(!frogBullets.isEmpty()){ 
