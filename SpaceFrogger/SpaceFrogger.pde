@@ -3,21 +3,21 @@ ArrayList<Ship> enemies = new ArrayList();
 Frog user;
 ArrayList<FBullet> frogBullets = new ArrayList();
 ArrayList<SBullet> enemyBullets = new ArrayList();
-Wormhole hole;
+Wormhole hole = new Wormhole();
 
 public void setup(){
-  size(1000,1000);
+  size(1000,1000); 
   background(0);
   PImage stars = loadImage("stars.png");
   stars.resize(width, height);
   image(stars, 0, 0);
   user = new Frog(10,10);
   //Ship to test mechanics
-  Ship s = new Ship(5,5);
-  Ship s = new Ship(5,5);
-  Ship s = new Ship(5,5);
-  Ship s = new Ship(5,5);
-  enemies.add(s);
+  Ship s0 = new Ship(5,5);
+  Ship s1 = new Ship(5,5);
+  Ship s2 = new Ship(5,5);
+  Ship s3 = new Ship(5,5);
+  enemies.add(s0);
   user.display();
 }
   
@@ -33,7 +33,9 @@ public void draw(){
   if(user.hp < 1){
    //Restart game
   }
-  user.display();
+  if(user.display){
+    user.display();
+  }
   fill(255);
   textSize(20);
   text("x: " + user.getx() + "\ny: " + user.gety(),0,20);
@@ -59,9 +61,7 @@ public void draw(){
   }
   else{
    //wormhole appears once all enemy ships are eliminated
-   hole = new Wormhole();
-   hole.display();
-   hole.collide(user);
+   hole.display = true;
   }
   if(!asteroids.isEmpty()){
     for(int i = 0; i < asteroids.size(); i++){
@@ -73,6 +73,16 @@ public void draw(){
       asteroids.remove(i); 
      }
     }
+  }
+  if(hole.display){
+   hole.display();
+   if(hole.collide(user)){
+     asteroids.clear();
+     user.display = false;
+     fill(255);
+     textSize(50);
+     text("End of Demo",350,500);
+   }
   }
 }
 
@@ -100,5 +110,5 @@ public void keyPressed(){
 
 public void enemyMove(){
   if(enemies.get(0).getx() < 100){
-    
+  }
 }

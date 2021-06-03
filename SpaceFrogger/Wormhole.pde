@@ -1,7 +1,11 @@
 public class Wormhole extends Entity{
+  public boolean display;
   
   public Wormhole(){
+    display = false;
     radius = 65;
+    x = 400;
+    y = 10;
   }
   
   public void display(){

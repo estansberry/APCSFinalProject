@@ -1,5 +1,6 @@
 public class Frog extends Entity{
   public int hp;
+  public boolean display;
   
   public Frog(float DX,float DY){
    x = 500;
@@ -8,6 +9,7 @@ public class Frog extends Entity{
    dy = DY;
    radius = 100;
    hp = 3;
+   display = true;
   }
   
   public int gethp(){
