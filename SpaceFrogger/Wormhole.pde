@@ -1,7 +1,7 @@
 public class Wormhole extends Entity{
   
   public Wormhole(){
-    radius = 50;
+    radius = 65;
   }
   
   public void display(){

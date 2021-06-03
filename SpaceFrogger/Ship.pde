@@ -10,7 +10,11 @@ public class Ship extends Entity{
   }
   
   public void shoot(){
-  }  
+  }
+  
+  public void moveX(float num){
+    x = x + num;
+  }
   
   public void display(){
     int rad = 75;

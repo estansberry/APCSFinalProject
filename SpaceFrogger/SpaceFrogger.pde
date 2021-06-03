@@ -14,6 +14,9 @@ public void setup(){
   user = new Frog(10,10);
   //Ship to test mechanics
   Ship s = new Ship(5,5);
+  Ship s = new Ship(5,5);
+  Ship s = new Ship(5,5);
+  Ship s = new Ship(5,5);
   enemies.add(s);
   user.display();
 }
@@ -58,7 +61,7 @@ public void draw(){
    //wormhole appears once all enemy ships are eliminated
    hole = new Wormhole();
    hole.display();
-   
+   hole.collide(user);
   }
   if(!asteroids.isEmpty()){
     for(int i = 0; i < asteroids.size(); i++){
@@ -93,4 +96,9 @@ public void keyPressed(){
     }
    }
   }
+}
+
+public void enemyMove(){
+  if(enemies.get(0).getx() < 100){
+    
 }
