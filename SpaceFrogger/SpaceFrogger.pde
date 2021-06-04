@@ -13,9 +13,7 @@ int[] asteroidValues = new int[5];{
 }
 
 public void setup(){
-<<<<<<< HEAD
   ellipse(100, 100, 50, 50);
-=======
   frameRate(30);
   size(1000,1000); 
   background(0);
@@ -35,7 +33,6 @@ public void setup(){
   enemies.add(s3);
   enemies.add(s4);
   user.display();
->>>>>>> main
 }
   
 public void run(){
