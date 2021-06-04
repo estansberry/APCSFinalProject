@@ -21,10 +21,7 @@ public void setup(){
   image(stars, 0, 0);
   user = new Frog(10,10);
   //Ship to test mechanics
-  Ship s0 = new Ship(5,5);
-  Ship s1 = new Ship(5,5);
-  Ship s2 = new Ship(5,5);
-  Ship s3 = new Ship(5,5);
+  Ship s0 = new Ship(-2,1);
   enemies.add(s0);
   user.display();
 }
@@ -37,6 +34,10 @@ public void draw(){
   PImage stars = loadImage("stars.png");
   stars.resize(width, height);
   image(stars, 0, 0);
+  enemyMove();
+  for(int i = 0; i < enemies.size(); i ++){
+    enemies.get(0).display();
+  }
   if(user.bulletCollide(enemyBullets) || user.asteroidCollide(asteroids)){
     user.x = 500;
     user.y = 750;
@@ -126,6 +127,22 @@ public void keyPressed(){
 }
 
 public void enemyMove(){
-  if(enemies.get(0).getx() < 100){
+  if(enemies.size() > 0){
+    if(enemies.get(0).getx() < 100){
+      enemies.get(0).setDX(0);
+      enemies.get(0).setDY(-0.5);
+    }
+    if(enemies.get(0).getx() > 900){
+     enemies.get(0).setDY(-0.5);
+      enemies.get(0).setDX(0);
+    }
+    if(enemies.get(0).gety() < 50 && enemies.get(0).getx() < 100){
+      enemies.get(0).setDX(3);
+      enemies.get(0).setDY(0.5);
+    }
+    if(enemies.get(0).gety() < 50 && enemies.get(0).getx() > 900){
+      enemies.get(0).setDX(-3);
+      enemies.get(0).setDY(0.5);
+    }
   }
 }

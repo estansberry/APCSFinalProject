@@ -13,8 +13,17 @@ public class Ship extends Entity{
   public void shoot(){
   }
   
-  public void moveX(float num){
-    x = x + num;
+  public void setDX(float num){
+    dx = num;
+  }
+  
+  public void setDY(float num){
+    dy = num;
+  }
+  
+  public void move(){
+    x += dx;
+    y+= dy;
   }
   
   public void display(){

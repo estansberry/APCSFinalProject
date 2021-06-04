@@ -55,7 +55,7 @@ public class Frog extends Entity{
     fill(0, 0, 0, 0);
     ellipseMode(CENTER);
     rectMode(CENTER);
-    ellipse(x, y, myRadius, myRadius);
+    //ellipse(x, y, myRadius, myRadius);
     stroke(#6B9371);
     fill(#6B9371);
     //head
