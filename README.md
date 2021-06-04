@@ -9,7 +9,16 @@ Link to Prototype:
 https://docs.google.com/document/d/170Zhcxiy1f5RUTc2yg8nOsAyw1jsenJ-h1eg3fg3TxA/edit?usp=sharing
 
 Elizabeth's Deadlog: <br/>
-5/24/21 - I created all of the classes and individual files, basically just the skeleton of the program.
+5/24/21 - I created all of the classes and individual files, basically just the skeleton of the program, and then I added a few new methods that we discussed in class. <br/>
+5/26/21 - I wrote the code for the frog's basic appearance and wrote a loop to add stars to the background. <br/>
+5/28/21 - I fixed an issue with the background <br/>
+5/31/21 - I made a fix with the instantiation of our ArrayLists, and added the code for the Alien spaceship. <br/>
+
 
 Aidan's Deadlog: <br/>
-
+5/24/21 - I created the constructors for each of the classes and then wrote some barebones code for the move methods in each class. <br/>
+5/26/21 - I updated all the double variables to float and starting working on the SpaceFrogger code: I instantiated some ArrayLists for the different classes, wrote the keyPressed method, and starting working on the setup and draw methods.  <br/>
+5/28/21 - Made entity an abstract class, fixed keyPressed, cleaned up Frog constructor and display variable names, and changed move methods to use dx and dy. <br/>
+5/31/21 - The Frog is now able to shoot bullets and draw method goes through the bullets and moves them accordingly. <br/>
+6/1/21 - There is now a limit on the bullets and they are removed once off screen. The Bullets now effect the enemy ships, asteroids, and user, destroying the enemies on impact and lowering the hp of the asteroids and user. <br/>
+6/3/21 - Added a new collide method for the Frog class and added in the asteroids. <br/>
