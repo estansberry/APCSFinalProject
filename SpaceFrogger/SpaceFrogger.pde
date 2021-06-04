@@ -21,8 +21,16 @@ public void setup(){
   image(stars, 0, 0);
   user = new Frog(10,10);
   //Ship to test mechanics
-  Ship s0 = new Ship(-2,1);
+  Ship s0 = new Ship(-2, 1, 0);
+  Ship s1 = new Ship(-2, 1, 1);
+  Ship s2 = new Ship(-2, 1, 2);
+  Ship s3 = new Ship(-2, 1, 3);
+  Ship s4 = new Ship(-2, 1, 4);
   enemies.add(s0);
+  enemies.add(s1);
+  enemies.add(s2);
+  enemies.add(s3);
+  enemies.add(s4);
   user.display();
 }
   
@@ -128,22 +136,25 @@ public void keyPressed(){
 }
 
 public void enemyMove(){
-  if(enemies.size() > 0){
-    if(enemies.get(0).getx() < 100){
-      enemies.get(0).setDX(0);
-      enemies.get(0).setDY(-0.5);
-    }
-    if(enemies.get(0).getx() > 900){
-     enemies.get(0).setDY(-0.5);
-      enemies.get(0).setDX(0);
-    }
-    if(enemies.get(0).gety() < 50 && enemies.get(0).getx() < 100){
-      enemies.get(0).setDX(3);
-      enemies.get(0).setDY(0.5);
-    }
-    if(enemies.get(0).gety() < 50 && enemies.get(0).getx() > 900){
-      enemies.get(0).setDX(-3);
-      enemies.get(0).setDY(0.5);
+  int size = enemies.size();
+  if(size > 0){
+    for(int i = 0; i < size; i ++){
+      if(enemies.get(0).getx() < 50 || (enemies.get(0).getx() < 250 && enemies.get(0).gety() > 310)){
+        enemies.get(i).setDX(0);
+        enemies.get(i).setDY(-1.5);
+      }
+      if(enemies.get(size - 1).getx() > 950 || (enemies.get(size - 1).getx() > 750 && enemies.get(size - 1).gety() > 310)){
+       enemies.get(i).setDY(-1.5);
+        enemies.get(i).setDX(0);
+      }
+      if(enemies.get(0).gety() < 50 && enemies.get(0).getx() < 250){
+        enemies.get(i).setDX(3);
+        enemies.get(i).setDY(0.5);
+      }
+      if(enemies.get(0).gety() < 50 && enemies.get(size - 1).getx() > 750){
+        enemies.get(i).setDX(-3);
+        enemies.get(i).setDY(0.5);
+      }
     }
   }
 }

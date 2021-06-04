@@ -1,8 +1,8 @@
 public class Ship extends Entity{
   public boolean colliding;
   
-  public Ship(float DX,float DY){
-   x = 500;
+  public Ship(float DX, float DY, int order){
+   x = 70*order + 500;
    y = 200;
    dx = DX;
    dy = DY;
