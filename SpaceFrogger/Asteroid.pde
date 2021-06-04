@@ -20,6 +20,7 @@ public class Asteroid extends Entity{
     noStroke();
     fill(c);
     ellipse(x,y,radius*2,radius*2);
+    rect(x, y, radius*1.6, radius*1.6);
   }
   
   public void collide(ArrayList<FBullet> bullets){

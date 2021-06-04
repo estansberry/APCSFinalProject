@@ -36,7 +36,8 @@ public void draw(){
   image(stars, 0, 0);
   enemyMove();
   for(int i = 0; i < enemies.size(); i ++){
-    enemies.get(0).display();
+    enemies.get(i).move();
+    enemies.get(i).display();
   }
   if(user.bulletCollide(enemyBullets) || user.asteroidCollide(asteroids)){
     user.x = 500;
@@ -50,7 +51,7 @@ public void draw(){
   }
   fill(255);
   textSize(20);
-  text("x: " + user.getx() + "\ny: " + user.gety() + "\nhp: " + user.gethp(),0,20);
+  text("x: " + user.getx() + "\ny: " + user.gety(),0,20);
   int random = (int)Math.floor(Math.random()*(15-1+1)+1);
   if(random == 1){
     int place = (int)Math.floor(Math.random()*(4-0+1)+0);

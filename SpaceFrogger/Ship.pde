@@ -32,7 +32,7 @@ public class Ship extends Entity{
     ellipseMode(CENTER);
     rectMode(CENTER);
     fill(0, 0, 0, 0);
-    ellipse(x, y, rad, rad);
+    //ellipse(x, y, rad, rad);
     fill(#542A83);
     stroke(#542A83);
     rect(x, y - rad/6, rad/2.75, rad*.6);
