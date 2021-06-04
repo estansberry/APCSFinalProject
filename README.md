@@ -13,7 +13,7 @@ https://docs.google.com/document/d/170Zhcxiy1f5RUTc2yg8nOsAyw1jsenJ-h1eg3fg3TxA/
 5/26/21 - I wrote the code for the frog's basic appearance and wrote a loop to add stars to the background. <br/>
 5/28/21 - I fixed an issue with the background <br/>
 5/31/21 - I made a fix with the instantiation of our ArrayLists, and added the code for the design of the Alien spaceship. <br/>
-6/3/21 - I added limits to the movemont of the frog, added the wormhole design, added design fixes for the asteroids, and coded the movement of the Alien spaceships. <br/>
+6/3/21 - I added limits to the movement of the frog, added the wormhole design, added design fixes for the asteroids, and coded the movement of the Alien spaceships. <br/>
 
 <h2> Aidan's Deadlog: <br/> </h2>
 5/24/21 - I created the constructors for each of the classes and then wrote some barebones code for the move methods in each class. <br/>
