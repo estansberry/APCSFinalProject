@@ -21,3 +21,4 @@ Aidan's Deadlog: <br/>
 5/28/21 - Made entity an abstract class, fixed keyPressed, cleaned up Frog constructor and display variable names, and changed move methods to use dx and dy. <br/>
 5/31/21 - The Frog is now able to shoot bullets and draw method goes through the bullets and moves them accordingly. <br/>
 6/1/21 - There is now a limit on the bullets and they are removed once off screen. The Bullets now effect the enemy ships, asteroids, and user, destroying the enemies on impact and lowering the hp of the asteroids and user. <br/>
+6/3/21 - Added a new collide method for the Frog class and added in the asteroids. <br/>
