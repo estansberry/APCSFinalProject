@@ -33,10 +33,6 @@ public void setup(){
   enemies.add(s4);
   user.display();
 }
-  
-public void run(){
-  
-}
 
 public void draw(){
   PImage stars = loadImage("stars.png");
