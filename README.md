@@ -22,3 +22,4 @@ https://docs.google.com/document/d/170Zhcxiy1f5RUTc2yg8nOsAyw1jsenJ-h1eg3fg3TxA/
 5/31/21 - The Frog is now able to shoot bullets and draw method goes through the bullets and moves them accordingly. <br/>
 6/1/21 - There is now a limit on the bullets and they are removed once off screen. The Bullets now effect the enemy ships, asteroids, and user, destroying the enemies on impact and lowering the hp of the asteroids and user. <br/>
 6/3/21 - Added a new collide method for the Frog class and added in the asteroids. <br/>
+6/7/21 - Enemies now shoot bullets that kill user when hit. Frog and enemy bullets cancel each other out now. <br/>
