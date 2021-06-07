@@ -65,14 +65,14 @@ public void draw(){
   }
   random = (int)Math.floor(Math.random()*(10-1+1)+1);
   if(random == 1){
-    int place = (int)Math.floor(Math.random()*(4-0+1)+0);
+    int place = (int)Math.floor(Math.random()*((enemies.size()-1)-0+1)+0);
     float randomY = enemies.get(place).gety();
     float randomX = enemies.get(place).getx();
     SBullet holder = new SBullet(randomX,randomY,20,10,color(255,0,0));
     enemyBullets.add(holder);
   }
   if(!frogBullets.isEmpty()){ 
-    for(int i = 0; i < frogBullets.size()-1; i++){
+    for(int i = 0; i < frogBullets.size(); i++){
      FBullet b = frogBullets.get(i);
      b.move();
      b.collide(enemyBullets);
