@@ -72,10 +72,11 @@ public void draw(){
     enemyBullets.add(holder);
   }
   if(!frogBullets.isEmpty()){ 
-    for(int i = 0; i < frogBullets.size(); i++){
+    for(int i = 0; i < frogBullets.size()-1; i++){
      FBullet b = frogBullets.get(i);
      b.move();
-     if(b.y < 0){
+     b.collide(enemyBullets);
+     if(b.y < 0 || b.colliding){
       frogBullets.remove(i); 
      }
      b.display();
@@ -85,9 +86,6 @@ public void draw(){
     for(int i = 0; i < enemyBullets.size(); i++){
      SBullet b = enemyBullets.get(i);
      b.move();
-     if(b.y < 0 || b.y > 900){
-      enemyBullets.remove(i); 
-     }
      b.display();
     }
   }
