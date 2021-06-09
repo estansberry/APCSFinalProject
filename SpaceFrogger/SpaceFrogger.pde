@@ -51,11 +51,11 @@ public void draw(){
   //skip intro button
   if(!skipintro && drawcount < 650 && level == 1){
     fill(#B71818);
-    rect(900, 775, 150, 50);
+    rect(900, 760, 150, 50);
     textSize(30);
     fill(0);
     textAlign(LEFT);
-    text("skip intro", 832, 785);
+    text("skip intro", 832, 772);
   }
   if(!skipintro && ellipsex > - 250 && level == 1){
     fill(#478140);
@@ -648,7 +648,7 @@ public void keyPressed(){
 
 public void mousePressed(){
   if(mouseButton == LEFT){
-    if(mouseX < 975 && mouseX > 825 && mouseY < 800 && mouseY > 750){
+    if(mouseX < 975 && mouseX > 825 && mouseY < 785 && mouseY > 735){
       skipintro = true;
     }
   }
