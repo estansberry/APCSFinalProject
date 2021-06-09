@@ -146,13 +146,6 @@ public void draw(){
        b.display();
       }
      }
-     if(!enemyBullets.isEmpty()){ 
-      for(int i = 0; i < enemyBullets.size(); i++){
-       SBullet b = enemyBullets.get(i);
-       b.move();
-       b.display();
-      }
-     }
      if(!enemies.isEmpty()){
       for(int i = 0; i < enemies.size(); i++){
        Ship enemy = enemies.get(i);
@@ -161,14 +154,6 @@ public void draw(){
         if(enemy.colliding){
          enemies.remove(i); 
         }
-       }
-       random = (int)Math.floor(Math.random()*(10-1+1)+1);
-       if(random == 1){
-        int place = (int)Math.floor(Math.random()*((enemies.size()-1)-0+1)+0);
-        float randomY = enemies.get(place).gety();
-        float randomX = enemies.get(place).getx();
-        SBullet holder = new SBullet(randomX,randomY,20,10,color(255,0,0));
-        enemyBullets.add(holder);
        }
       }
       else{
@@ -195,7 +180,6 @@ public void draw(){
         asteroids = new ArrayList();
         enemies = new ArrayList();
         frogBullets = new ArrayList();
-        enemyBullets = new ArrayList();
         setup();
       }
     }
