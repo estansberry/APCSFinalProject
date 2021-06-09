@@ -633,7 +633,7 @@ public void keyPressed(){
     if(keyCode == UP){
      user.moveUp(); 
     }
-    if(keyCode == DOWN){
+    if(keyCode == DOWN && user.y <= 740){
      user.moveDown(); 
     }
     if(keyCode == RIGHT){
