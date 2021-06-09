@@ -33,6 +33,7 @@ public void setup(){
   enemies.add(s3);
   enemies.add(s4);
   //user.display();
+  hole = new Wormhole();
 }
 
 int ellipsex = 500;
@@ -154,6 +155,7 @@ public void draw(){
       }
      }
      if(!enemies.isEmpty()){
+      hole.display = false;
       for(int i = 0; i < enemies.size(); i++){
        if(!enemies.isEmpty()){
         Ship enemy = enemies.get(i);
@@ -186,7 +188,6 @@ public void draw(){
        if(hole.collide(user)){
         asteroids.clear();
         user.display = false;
-        hole.display = false;
         level++;
         asteroids = new ArrayList();
         enemies = new ArrayList();
@@ -248,6 +249,7 @@ public void draw(){
       }
      }
      if(!enemies.isEmpty()){
+      hole.display = false;
       for(int i = 0; i < enemies.size(); i++){
        if(!enemies.isEmpty()){
         Ship enemy = enemies.get(i);
@@ -258,7 +260,6 @@ public void draw(){
         }
        }
       }
-      }
        random = (int)Math.floor(Math.random()*(10-1+1)+1);
        if(random == 1 && !enemies.isEmpty()){
         int place = (int)Math.floor(Math.random()*((enemies.size()-1)-0+1)+0);
@@ -267,6 +268,7 @@ public void draw(){
         SBullet holder = new SBullet(randomX,randomY,20,10,color(255,0,0));
         enemyBullets.add(holder);
        }
+     }
       else{
        hole.display = true;
       }
@@ -294,6 +296,7 @@ public void draw(){
         enemies = new ArrayList();
         frogBullets = new ArrayList();
         enemyBullets = new ArrayList();
+        hole = new Wormhole();
         setup();
       }
     }
@@ -351,6 +354,7 @@ public void draw(){
       }
      }
      if(!enemies.isEmpty()){
+      hole.display = false;
       for(int i = 0; i < enemies.size(); i++){
        if(!enemies.isEmpty()){
         Ship enemy = enemies.get(i);
@@ -361,7 +365,6 @@ public void draw(){
         }
        }
       }
-      }
        random = (int)Math.floor(Math.random()*(10-1+1)+1);
        if(random == 1 && !enemies.isEmpty()){
         int place = (int)Math.floor(Math.random()*((enemies.size()-1)-0+1)+0);
@@ -370,6 +373,7 @@ public void draw(){
         SBullet holder = new SBullet(randomX,randomY,20,10,color(255,0,0));
         enemyBullets.add(holder);
        }
+     }
       else{
        hole.display = true;
       }
@@ -397,6 +401,7 @@ public void draw(){
         enemies = new ArrayList();
         frogBullets = new ArrayList();
         enemyBullets = new ArrayList();
+        hole = new Wormhole();
         setup();
       }
     }
@@ -454,6 +459,7 @@ public void draw(){
       }
      }
      if(!enemies.isEmpty()){
+      hole.display = false;
       for(int i = 0; i < enemies.size(); i++){
        if(!enemies.isEmpty()){
         Ship enemy = enemies.get(i);
@@ -464,7 +470,6 @@ public void draw(){
         }
        }
       }
-      }
        random = (int)Math.floor(Math.random()*(10-1+1)+1);
        if(random == 1 && !enemies.isEmpty()){
         int place = (int)Math.floor(Math.random()*((enemies.size()-1)-0+1)+0);
@@ -473,6 +478,7 @@ public void draw(){
         SBullet holder = new SBullet(randomX,randomY,20,10,color(255,0,0));
         enemyBullets.add(holder);
        }
+     }
       else{
        hole.display = true;
       }
@@ -500,6 +506,7 @@ public void draw(){
         enemies = new ArrayList();
         frogBullets = new ArrayList();
         enemyBullets = new ArrayList();
+        hole = new Wormhole();
         setup();
       }
     }
@@ -557,6 +564,7 @@ public void draw(){
       }
      }
      if(!enemies.isEmpty()){
+      hole.display = false;
       for(int i = 0; i < enemies.size(); i++){
        if(!enemies.isEmpty()){
         Ship enemy = enemies.get(i);
@@ -567,7 +575,6 @@ public void draw(){
         }
        }
       }
-      }
        random = (int)Math.floor(Math.random()*(10-1+1)+1);
        if(random == 1 && !enemies.isEmpty()){
         int place = (int)Math.floor(Math.random()*((enemies.size()-1)-0+1)+0);
@@ -576,6 +583,7 @@ public void draw(){
         SBullet holder = new SBullet(randomX,randomY,20,10,color(255,0,0));
         enemyBullets.add(holder);
        }
+     }
       else{
        hole.display = true;
       }
