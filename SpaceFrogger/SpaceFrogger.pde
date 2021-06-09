@@ -54,6 +54,7 @@ public void draw(){
     rect(900, 775, 150, 50);
     textSize(30);
     fill(0);
+    textAlign(LEFT);
     text("skip intro", 832, 785);
   }
   if(!skipintro && ellipsex > - 250 && level == 1){
@@ -85,6 +86,7 @@ public void draw(){
   }if(!skipintro && drawcount > 300 && level == 1){
     fill(#F5EC36);
     textSize(50);
+    textAlign(CENTER);
     text("Help ASTROFROG make his way back!", 500, texty);
     text("Avoid the ASTEROIDS,", 500, texty + 100);
     text("Destroy the ENEMY SPACESHIPS,", 500, texty + 200);
