@@ -127,7 +127,7 @@ public void draw(){
     }
     fill(255);
     textSize(20);
-    text("x: " + user.getx() + "\ny: " + user.gety(),30,20);
+    text("x: " + user.getx() + "\ny: " + user.gety(),50,20);
     int random = (int)Math.floor(Math.random()*(15-1+1)+1);
     if(random == 1){
      int place = (int)Math.floor(Math.random()*(4-0+1)+0);
@@ -192,6 +192,10 @@ public void draw(){
         user.display = false;
         hole.display = false;
         level++;
+        asteroids = new ArrayList();
+        enemies = new ArrayList();
+        frogBullets = new ArrayList();
+        enemyBullets = new ArrayList();
         setup();
       }
     }
@@ -214,7 +218,7 @@ public void draw(){
     }
     fill(255);
     textSize(20);
-    text("x: " + user.getx() + "\ny: " + user.gety(),30,20);
+    text("x: " + user.getx() + "\ny: " + user.gety(),50,20);
     int random = (int)Math.floor(Math.random()*(15-1+1)+1);
     if(random == 1){
      int place = (int)Math.floor(Math.random()*(4-0+1)+0);
@@ -279,6 +283,10 @@ public void draw(){
         user.display = false;
         hole.display = false;
         level++;
+        asteroids = new ArrayList();
+        enemies = new ArrayList();
+        frogBullets = new ArrayList();
+        enemyBullets = new ArrayList();
         setup();
       }
     }
@@ -301,7 +309,7 @@ public void draw(){
     }
     fill(255);
     textSize(20);
-    text("x: " + user.getx() + "\ny: " + user.gety(),30,20);
+    text("x: " + user.getx() + "\ny: " + user.gety(),50,20);
     int random = (int)Math.floor(Math.random()*(15-1+1)+1);
     if(random == 1){
      int place = (int)Math.floor(Math.random()*(4-0+1)+0);
@@ -366,6 +374,10 @@ public void draw(){
         user.display = false;
         hole.display = false;
         level++;
+        asteroids = new ArrayList();
+        enemies = new ArrayList();
+        frogBullets = new ArrayList();
+        enemyBullets = new ArrayList();
         setup();
       }
     }
@@ -388,7 +400,7 @@ public void draw(){
     }
     fill(255);
     textSize(20);
-    text("x: " + user.getx() + "\ny: " + user.gety(),30,20);
+    text("x: " + user.getx() + "\ny: " + user.gety(),50,20);
     int random = (int)Math.floor(Math.random()*(15-1+1)+1);
     if(random == 1){
      int place = (int)Math.floor(Math.random()*(4-0+1)+0);
@@ -453,6 +465,10 @@ public void draw(){
         user.display = false;
         hole.display = false;
         level++;
+        asteroids = new ArrayList();
+        enemies = new ArrayList();
+        frogBullets = new ArrayList();
+        enemyBullets = new ArrayList();
         setup();
       }
     }
@@ -475,7 +491,7 @@ public void draw(){
     }
     fill(255);
     textSize(20);
-    text("x: " + user.getx() + "\ny: " + user.gety(),30,20);
+    text("x: " + user.getx() + "\ny: " + user.gety(),50,20);
     int random = (int)Math.floor(Math.random()*(15-1+1)+1);
     if(random == 1){
      int place = (int)Math.floor(Math.random()*(4-0+1)+0);
