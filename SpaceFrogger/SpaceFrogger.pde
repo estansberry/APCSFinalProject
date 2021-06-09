@@ -1,6 +1,6 @@
 ArrayList<Asteroid> asteroids = new ArrayList();
 ArrayList<Ship> enemies = new ArrayList();
-Frog user;
+Frog user = new Frog(10,10);
 ArrayList<FBullet> frogBullets = new ArrayList();
 ArrayList<SBullet> enemyBullets = new ArrayList();
 Wormhole hole = new Wormhole();
@@ -17,7 +17,6 @@ public void setup(){
   frameRate(30);
   size(1000,1000); 
   background(#478140);
-  user = new Frog(10,10);
   //Ship to test mechanics
   Ship s0 = new Ship(-2, 1, 0);
   Ship s1 = new Ship(-2, 1, 1);
@@ -200,6 +199,8 @@ public void draw(){
         asteroids = new ArrayList();
         enemies = new ArrayList();
         frogBullets = new ArrayList();
+        user.x = 500;
+        user.y = 750;
         setup();
       }
     }
@@ -304,7 +305,8 @@ public void draw(){
         enemies = new ArrayList();
         frogBullets = new ArrayList();
         enemyBullets = new ArrayList();
-        hole = new Wormhole();
+        user.x = 500;
+        user.y = 750;
         setup();
       }
     }
@@ -409,7 +411,8 @@ public void draw(){
         enemies = new ArrayList();
         frogBullets = new ArrayList();
         enemyBullets = new ArrayList();
-        hole = new Wormhole();
+        user.x = 500;
+        user.y = 750;
         setup();
       }
     }
@@ -514,7 +517,8 @@ public void draw(){
         enemies = new ArrayList();
         frogBullets = new ArrayList();
         enemyBullets = new ArrayList();
-        hole = new Wormhole();
+        user.x = 500;
+        user.y = 750;
         setup();
       }
     }
@@ -614,6 +618,8 @@ public void draw(){
         asteroids.clear();
         user.display = false;
         hole.display = false;
+        user.x = 500;
+        user.y = 750;
         level++;
       }
     }
