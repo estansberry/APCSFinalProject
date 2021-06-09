@@ -26,26 +26,44 @@ public class Ship extends Entity{
     y+= dy;
   }
   
-  public void display(){
+  public void display(int level){
+    color main = 255;
+    color second = 0;
+    if(level == 1){
+      main = #542A83;
+      second = #135F2B;
+    }else if(level == 2){
+      main = #E8851A;
+      second = #1A4FE8;
+    }else if(level == 3){
+      main = #E71AE8;
+      second = #F0DF1D;
+    }else if(level == 4){
+      main = #60D9E3;
+      second = #FCAF30;
+    }else if(level == 5){
+      main = #FC3B30;
+      second = #585353;
+    }
     int rad = 75;
     size(1000,1000);
     ellipseMode(CENTER);
     rectMode(CENTER);
     fill(0, 0, 0, 0);
     //ellipse(x, y, rad, rad);
-    fill(#542A83);
-    stroke(#542A83);
+    fill(main);
+    stroke(second);
     rect(x, y - rad/6, rad/2.75, rad*.6);
     rect(x, y, rad*.9, rad/15);
     rect(x, y, rad/7, rad*.8);
     //
-    fill(#135F2B);
-    stroke(#135F2B);
+    fill(second);
+    stroke(second);
     triangle(x - rad/5.5, y - rad/6, x - rad/5.5, y - rad/2, x - rad/2.75, y - rad/2);
     triangle(x + rad/5.5, y - rad/6, x + rad/5.5, y - rad/2, x + rad/2.75, y - rad/2);
     //
     fill(225);
-    stroke(#542A83);
+    stroke(main);
     ellipse(x - rad/5.5, y - rad/6 + rad*.3, rad/5, rad/5);
     ellipse(x + rad/5.5, y - rad/6 + rad*.3, rad/5, rad/5);
     fill(0);
