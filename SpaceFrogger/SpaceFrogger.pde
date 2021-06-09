@@ -219,7 +219,7 @@ public void draw(){
     }
     fill(255);
     textSize(20);
-    text("x: " + user.getx() + "\ny: " + user.gety(),50,20);
+    text(": " + user.getx() + "\ny: " + user.gety(),50,20);
     int random = (int)Math.floor(Math.random()*(15-1+1)+1);
     if(random == 1){
      int place = (int)Math.floor(Math.random()*(4-0+1)+0);
@@ -260,7 +260,7 @@ public void draw(){
       }
       }
        random = (int)Math.floor(Math.random()*(10-1+1)+1);
-       if(random == 1){
+       if(random == 1 && !enemies.isEmpty()){
         int place = (int)Math.floor(Math.random()*((enemies.size()-1)-0+1)+0);
         float randomY = enemies.get(place).gety();
         float randomX = enemies.get(place).getx();
@@ -363,7 +363,7 @@ public void draw(){
       }
       }
        random = (int)Math.floor(Math.random()*(10-1+1)+1);
-       if(random == 1){
+       if(random == 1 && !enemies.isEmpty()){
         int place = (int)Math.floor(Math.random()*((enemies.size()-1)-0+1)+0);
         float randomY = enemies.get(place).gety();
         float randomX = enemies.get(place).getx();
@@ -466,7 +466,7 @@ public void draw(){
       }
       }
        random = (int)Math.floor(Math.random()*(10-1+1)+1);
-       if(random == 1){
+       if(random == 1 && !enemies.isEmpty()){
         int place = (int)Math.floor(Math.random()*((enemies.size()-1)-0+1)+0);
         float randomY = enemies.get(place).gety();
         float randomX = enemies.get(place).getx();
@@ -569,7 +569,7 @@ public void draw(){
       }
       }
        random = (int)Math.floor(Math.random()*(10-1+1)+1);
-       if(random == 1){
+       if(random == 1 && !enemies.isEmpty()){
         int place = (int)Math.floor(Math.random()*((enemies.size()-1)-0+1)+0);
         float randomY = enemies.get(place).gety();
         float randomX = enemies.get(place).getx();
