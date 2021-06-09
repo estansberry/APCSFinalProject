@@ -44,7 +44,7 @@ public class Frog extends Entity{
   
   public void moveDown(){
     //Amount is subject to change
-    if(this.y + dy < height - radius/2){
+    if(this.y <= 740){
       this.y += dy;
     }
   }
