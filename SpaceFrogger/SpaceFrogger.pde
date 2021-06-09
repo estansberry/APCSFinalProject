@@ -4,6 +4,7 @@ Frog user;
 ArrayList<FBullet> frogBullets = new ArrayList();
 ArrayList<SBullet> enemyBullets = new ArrayList();
 Wormhole hole = new Wormhole();
+int level = 1;
 int[] asteroidValues = new int[5];{
  asteroidValues[0] = 400;
  asteroidValues[1] = 450;
@@ -108,7 +109,94 @@ public void draw(){
     textSize(200);
     text("GO!!", 500, 400);
   }
-  if(drawcount > 700){
+  if(drawcount > 700 && level == 1){
+    enemyMove();
+    for(int i = 0; i < enemies.size(); i ++){
+      enemies.get(i).move();
+      enemies.get(i).display();
+    }
+    if(user.bulletCollide(enemyBullets) || user.asteroidCollide(asteroids)){
+      user.x = 500;
+      user.y = 750;
+    }
+    if(user.hp < 1){
+     //level = 1;
+    }
+    if(user.display){
+      user.display();
+    }
+    fill(255);
+    textSize(20);
+    text("x: " + user.getx() + "\ny: " + user.gety(),30,20);
+    int random = (int)Math.floor(Math.random()*(15-1+1)+1);
+    if(random == 1){
+     int place = (int)Math.floor(Math.random()*(4-0+1)+0);
+     int randomY = asteroidValues[place];
+     Asteroid holder = new Asteroid(randomY,8,25,color(128));
+     asteroids.add(holder);
+     }
+     if(!frogBullets.isEmpty()){ 
+      for(int i = 0; i < frogBullets.size(); i++){
+       FBullet b = frogBullets.get(i);
+       b.move();
+       b.collide(enemyBullets);
+       if(b.y < 0 || b.colliding){
+        frogBullets.remove(i); 
+       }
+       b.display();
+      }
+     }
+     if(!enemyBullets.isEmpty()){ 
+      for(int i = 0; i < enemyBullets.size(); i++){
+       SBullet b = enemyBullets.get(i);
+       b.move();
+       b.display();
+      }
+     }
+     if(!enemies.isEmpty()){
+      for(int i = 0; i < enemies.size(); i++){
+       Ship enemy = enemies.get(i);
+        enemy.display();
+        enemy.collide(frogBullets);
+        if(enemy.colliding){
+         enemies.remove(i); 
+        }
+       }
+       random = (int)Math.floor(Math.random()*(10-1+1)+1);
+       if(random == 1){
+        int place = (int)Math.floor(Math.random()*((enemies.size()-1)-0+1)+0);
+        float randomY = enemies.get(place).gety();
+        float randomX = enemies.get(place).getx();
+        SBullet holder = new SBullet(randomX,randomY,20,10,color(255,0,0));
+        enemyBullets.add(holder);
+       }
+      }
+      else{
+       hole.display = true;
+      }
+      if(!asteroids.isEmpty()){
+       for(int i = 0; i < asteroids.size(); i++){
+        Asteroid meteor = asteroids.get(i);
+        meteor.move();
+        meteor.display();
+        meteor.collide(frogBullets);
+        if(meteor.colliding){
+         asteroids.remove(i); 
+        }
+       }
+      }
+      if(hole.display){
+       hole.display();
+       if(hole.collide(user)){
+        asteroids.clear();
+        user.display = false;
+        hole.display = false;
+        level++;
+        setup();
+      }
+    }
+  }
+  if(level == 2){
     enemyMove();
     for(int i = 0; i < enemies.size(); i ++){
       enemies.get(i).move();
@@ -126,15 +214,15 @@ public void draw(){
     }
     fill(255);
     textSize(20);
-    text("x: " + user.getx() + "\ny: " + user.gety(),0,20);
+    text("x: " + user.getx() + "\ny: " + user.gety(),30,20);
     int random = (int)Math.floor(Math.random()*(15-1+1)+1);
     if(random == 1){
-      int place = (int)Math.floor(Math.random()*(4-0+1)+0);
-      int randomY = asteroidValues[place];
-      Asteroid holder = new Asteroid(randomY,8,25,color(128));
-      asteroids.add(holder);
-    }
-    if(!frogBullets.isEmpty()){ 
+     int place = (int)Math.floor(Math.random()*(4-0+1)+0);
+     int randomY = asteroidValues[place];
+     Asteroid holder = new Asteroid(randomY,8,25,color(128));
+     asteroids.add(holder);
+     }
+     if(!frogBullets.isEmpty()){ 
       for(int i = 0; i < frogBullets.size(); i++){
        FBullet b = frogBullets.get(i);
        b.move();
@@ -144,56 +232,316 @@ public void draw(){
        }
        b.display();
       }
-    }
-    if(!enemyBullets.isEmpty()){ 
+     }
+     if(!enemyBullets.isEmpty()){ 
       for(int i = 0; i < enemyBullets.size(); i++){
        SBullet b = enemyBullets.get(i);
        b.move();
        b.display();
       }
-    }
-    if(!enemies.isEmpty()){
+     }
+     if(!enemies.isEmpty()){
       for(int i = 0; i < enemies.size(); i++){
        Ship enemy = enemies.get(i);
-       enemy.display();
-       enemy.collide(frogBullets);
-       if(enemy.colliding){
-        enemies.remove(i); 
+        enemy.display();
+        enemy.collide(frogBullets);
+        if(enemy.colliding){
+         enemies.remove(i); 
+        }
        }
-      }
-      random = (int)Math.floor(Math.random()*(10-1+1)+1);
-      if(random == 1){
+       random = (int)Math.floor(Math.random()*(10-1+1)+1);
+       if(random == 1){
         int place = (int)Math.floor(Math.random()*((enemies.size()-1)-0+1)+0);
         float randomY = enemies.get(place).gety();
         float randomX = enemies.get(place).getx();
         SBullet holder = new SBullet(randomX,randomY,20,10,color(255,0,0));
         enemyBullets.add(holder);
-      }
-     }
-    else{
-     hole.display = true;
-    }
-    if(!asteroids.isEmpty()){
-      for(int i = 0; i < asteroids.size(); i++){
-       Asteroid meteor = asteroids.get(i);
-       meteor.move();
-       meteor.display();
-       meteor.collide(frogBullets);
-       if(meteor.colliding){
-        asteroids.remove(i); 
        }
       }
+      else{
+       hole.display = true;
+      }
+      if(!asteroids.isEmpty()){
+       for(int i = 0; i < asteroids.size(); i++){
+        Asteroid meteor = asteroids.get(i);
+        meteor.move();
+        meteor.display();
+        meteor.collide(frogBullets);
+        if(meteor.colliding){
+         asteroids.remove(i); 
+        }
+       }
+      }
+      if(hole.display){
+       hole.display();
+       if(hole.collide(user)){
+        asteroids.clear();
+        user.display = false;
+        hole.display = false;
+        level++;
+        setup();
+      }
     }
-    if(hole.display){
-     hole.display();
-     if(hole.collide(user)){
-       asteroids.clear();
-       user.display = false;
-       hole.display = false;
-       fill(255);
-       textSize(50);
-       text("End of Demo",350,500);
+  }
+  if(level == 3){
+    enemyMove();
+    for(int i = 0; i < enemies.size(); i ++){
+      enemies.get(i).move();
+      enemies.get(i).display();
+    }
+    if(user.bulletCollide(enemyBullets) || user.asteroidCollide(asteroids)){
+      user.x = 500;
+      user.y = 750;
+    }
+    if(user.hp < 1){
+     //Restart game
+    }
+    if(user.display){
+      user.display();
+    }
+    fill(255);
+    textSize(20);
+    text("x: " + user.getx() + "\ny: " + user.gety(),30,20);
+    int random = (int)Math.floor(Math.random()*(15-1+1)+1);
+    if(random == 1){
+     int place = (int)Math.floor(Math.random()*(4-0+1)+0);
+     int randomY = asteroidValues[place];
+     Asteroid holder = new Asteroid(randomY,8,25,color(128));
+     asteroids.add(holder);
      }
+     if(!frogBullets.isEmpty()){ 
+      for(int i = 0; i < frogBullets.size(); i++){
+       FBullet b = frogBullets.get(i);
+       b.move();
+       b.collide(enemyBullets);
+       if(b.y < 0 || b.colliding){
+        frogBullets.remove(i); 
+       }
+       b.display();
+      }
+     }
+     if(!enemyBullets.isEmpty()){ 
+      for(int i = 0; i < enemyBullets.size(); i++){
+       SBullet b = enemyBullets.get(i);
+       b.move();
+       b.display();
+      }
+     }
+     if(!enemies.isEmpty()){
+      for(int i = 0; i < enemies.size(); i++){
+       Ship enemy = enemies.get(i);
+        enemy.display();
+        enemy.collide(frogBullets);
+        if(enemy.colliding){
+         enemies.remove(i); 
+        }
+       }
+       random = (int)Math.floor(Math.random()*(10-1+1)+1);
+       if(random == 1){
+        int place = (int)Math.floor(Math.random()*((enemies.size()-1)-0+1)+0);
+        float randomY = enemies.get(place).gety();
+        float randomX = enemies.get(place).getx();
+        SBullet holder = new SBullet(randomX,randomY,20,10,color(255,0,0));
+        enemyBullets.add(holder);
+       }
+      }
+      else{
+       hole.display = true;
+      }
+      if(!asteroids.isEmpty()){
+       for(int i = 0; i < asteroids.size(); i++){
+        Asteroid meteor = asteroids.get(i);
+        meteor.move();
+        meteor.display();
+        meteor.collide(frogBullets);
+        if(meteor.colliding){
+         asteroids.remove(i); 
+        }
+       }
+      }
+      if(hole.display){
+       hole.display();
+       if(hole.collide(user)){
+        asteroids.clear();
+        user.display = false;
+        hole.display = false;
+        level++;
+        setup();
+      }
+    }
+  }
+  if(level == 4){
+    enemyMove();
+    for(int i = 0; i < enemies.size(); i ++){
+      enemies.get(i).move();
+      enemies.get(i).display();
+    }
+    if(user.bulletCollide(enemyBullets) || user.asteroidCollide(asteroids)){
+      user.x = 500;
+      user.y = 750;
+    }
+    if(user.hp < 1){
+     //Restart game
+    }
+    if(user.display){
+      user.display();
+    }
+    fill(255);
+    textSize(20);
+    text("x: " + user.getx() + "\ny: " + user.gety(),30,20);
+    int random = (int)Math.floor(Math.random()*(15-1+1)+1);
+    if(random == 1){
+     int place = (int)Math.floor(Math.random()*(4-0+1)+0);
+     int randomY = asteroidValues[place];
+     Asteroid holder = new Asteroid(randomY,8,25,color(128));
+     asteroids.add(holder);
+     }
+     if(!frogBullets.isEmpty()){ 
+      for(int i = 0; i < frogBullets.size(); i++){
+       FBullet b = frogBullets.get(i);
+       b.move();
+       b.collide(enemyBullets);
+       if(b.y < 0 || b.colliding){
+        frogBullets.remove(i); 
+       }
+       b.display();
+      }
+     }
+     if(!enemyBullets.isEmpty()){ 
+      for(int i = 0; i < enemyBullets.size(); i++){
+       SBullet b = enemyBullets.get(i);
+       b.move();
+       b.display();
+      }
+     }
+     if(!enemies.isEmpty()){
+      for(int i = 0; i < enemies.size(); i++){
+       Ship enemy = enemies.get(i);
+        enemy.display();
+        enemy.collide(frogBullets);
+        if(enemy.colliding){
+         enemies.remove(i); 
+        }
+       }
+       random = (int)Math.floor(Math.random()*(10-1+1)+1);
+       if(random == 1){
+        int place = (int)Math.floor(Math.random()*((enemies.size()-1)-0+1)+0);
+        float randomY = enemies.get(place).gety();
+        float randomX = enemies.get(place).getx();
+        SBullet holder = new SBullet(randomX,randomY,20,10,color(255,0,0));
+        enemyBullets.add(holder);
+       }
+      }
+      else{
+       hole.display = true;
+      }
+      if(!asteroids.isEmpty()){
+       for(int i = 0; i < asteroids.size(); i++){
+        Asteroid meteor = asteroids.get(i);
+        meteor.move();
+        meteor.display();
+        meteor.collide(frogBullets);
+        if(meteor.colliding){
+         asteroids.remove(i); 
+        }
+       }
+      }
+      if(hole.display){
+       hole.display();
+       if(hole.collide(user)){
+        asteroids.clear();
+        user.display = false;
+        hole.display = false;
+        level++;
+        setup();
+      }
+    }
+  }
+  if(level == 5){
+    enemyMove();
+    for(int i = 0; i < enemies.size(); i ++){
+      enemies.get(i).move();
+      enemies.get(i).display();
+    }
+    if(user.bulletCollide(enemyBullets) || user.asteroidCollide(asteroids)){
+      user.x = 500;
+      user.y = 750;
+    }
+    if(user.hp < 1){
+     //Restart game
+    }
+    if(user.display){
+      user.display();
+    }
+    fill(255);
+    textSize(20);
+    text("x: " + user.getx() + "\ny: " + user.gety(),30,20);
+    int random = (int)Math.floor(Math.random()*(15-1+1)+1);
+    if(random == 1){
+     int place = (int)Math.floor(Math.random()*(4-0+1)+0);
+     int randomY = asteroidValues[place];
+     Asteroid holder = new Asteroid(randomY,8,25,color(128));
+     asteroids.add(holder);
+     }
+     if(!frogBullets.isEmpty()){ 
+      for(int i = 0; i < frogBullets.size(); i++){
+       FBullet b = frogBullets.get(i);
+       b.move();
+       b.collide(enemyBullets);
+       if(b.y < 0 || b.colliding){
+        frogBullets.remove(i); 
+       }
+       b.display();
+      }
+     }
+     if(!enemyBullets.isEmpty()){ 
+      for(int i = 0; i < enemyBullets.size(); i++){
+       SBullet b = enemyBullets.get(i);
+       b.move();
+       b.display();
+      }
+     }
+     if(!enemies.isEmpty()){
+      for(int i = 0; i < enemies.size(); i++){
+       Ship enemy = enemies.get(i);
+        enemy.display();
+        enemy.collide(frogBullets);
+        if(enemy.colliding){
+         enemies.remove(i); 
+        }
+       }
+       random = (int)Math.floor(Math.random()*(10-1+1)+1);
+       if(random == 1){
+        int place = (int)Math.floor(Math.random()*((enemies.size()-1)-0+1)+0);
+        float randomY = enemies.get(place).gety();
+        float randomX = enemies.get(place).getx();
+        SBullet holder = new SBullet(randomX,randomY,20,10,color(255,0,0));
+        enemyBullets.add(holder);
+       }
+      }
+      else{
+       hole.display = true;
+      }
+      if(!asteroids.isEmpty()){
+       for(int i = 0; i < asteroids.size(); i++){
+        Asteroid meteor = asteroids.get(i);
+        meteor.move();
+        meteor.display();
+        meteor.collide(frogBullets);
+        if(meteor.colliding){
+         asteroids.remove(i); 
+        }
+       }
+      }
+      if(hole.display){
+       hole.display();
+       if(hole.collide(user)){
+        asteroids.clear();
+        user.display = false;
+        hole.display = false;
+        level++;
+        setup();
+      }
     }
   }
 }
