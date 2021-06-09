@@ -3,8 +3,8 @@ public class Wormhole extends Entity{
   
   public Wormhole(){
     display = false;
-    radius = 65;
-    x = 400;
+    radius = 5;
+    x = 500;
     y = 60;
   }
   
