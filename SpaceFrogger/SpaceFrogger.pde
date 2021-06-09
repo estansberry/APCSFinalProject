@@ -146,7 +146,7 @@ public void draw(){
     if(random == 1){
      int place = (int)Math.floor(Math.random()*(4-0+1)+0);
      int randomY = asteroidValues[place];
-     Asteroid holder = new Asteroid(randomY,8,25,color(128));
+     Asteroid holder = new Asteroid(randomY,6,25,color(128));
      asteroids.add(holder);
      }
      if(!frogBullets.isEmpty()){ 
@@ -338,7 +338,7 @@ public void draw(){
     if(random == 1){
      int place = (int)Math.floor(Math.random()*(4-0+1)+0);
      int randomY = asteroidValues[place];
-     Asteroid holder = new Asteroid(randomY,8,25,color(128));
+     Asteroid holder = new Asteroid(randomY,10,25,color(128));
      asteroids.add(holder);
      }
      if(!frogBullets.isEmpty()){ 
@@ -443,7 +443,7 @@ public void draw(){
     if(random == 1){
      int place = (int)Math.floor(Math.random()*(4-0+1)+0);
      int randomY = asteroidValues[place];
-     Asteroid holder = new Asteroid(randomY,8,25,color(128));
+     Asteroid holder = new Asteroid(randomY,12,25,color(128));
      asteroids.add(holder);
      }
      if(!frogBullets.isEmpty()){ 
@@ -548,7 +548,7 @@ public void draw(){
     if(random == 1){
      int place = (int)Math.floor(Math.random()*(4-0+1)+0);
      int randomY = asteroidValues[place];
-     Asteroid holder = new Asteroid(randomY,8,25,color(128));
+     Asteroid holder = new Asteroid(randomY,14,25,color(128));
      asteroids.add(holder);
      }
      if(!frogBullets.isEmpty()){ 
@@ -626,7 +626,7 @@ public void draw(){
 
 public void keyPressed(){
   if(keyPressed && (drawcount > 650 || skipintro || level != 1)){
-   if(key == ' ' && frogBullets.size() <= 10){
+   if(key == ' ' && frogBullets.size() <= 4){
      frogBullets.add(user.shoot());
    }
    if(key == CODED){
