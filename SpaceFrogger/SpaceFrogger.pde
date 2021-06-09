@@ -544,6 +544,9 @@ public void draw(){
       }
     }
   }
+  if(level == 6){
+   //outro 
+  }
 }
 
 public void keyPressed(){
