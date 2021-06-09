@@ -120,7 +120,7 @@ public void draw(){
       user.y = 750;
     }
     if(user.hp < 1){
-     //level = 1;
+     level = 1;
     }
     if(user.display){
       user.display();
