@@ -33,6 +33,7 @@ public void setup(){
   hole = new Wormhole();
 }
 
+Boolean skipintro = false;
 int ellipsex = 500;
 int ellipsey = 400;
 float drawcount = 0;
@@ -47,21 +48,29 @@ public void draw(){
   stars.resize(width, height);
   image(stars, 0, 0);
   user.display();
-  if(ellipsex > - 250){
+  //skip intro button
+  if(!skipintro && drawcount < 650 && level == 1){
+    fill(#B71818);
+    rect(900, 775, 150, 50);
+    textSize(30);
+    fill(0);
+    text("skip intro", 832, 785);
+  }
+  if(!skipintro && ellipsex > - 250){
     fill(#478140);
     ellipse(ellipsex, ellipsey, 500/(drawcount/40), 500/(drawcount/40));
     fill(0);
     textSize(textsize);
     text("FROGGY", (ellipsex - 100), ellipsey);
     text("PLANET", (ellipsex - 100), (ellipsey + 50));
-  }if(drawcount >= 90){
+  }if(!skipintro && drawcount >= 90){
     ellipsex -= 5;
     ellipsey -= 5;
     if(textsize > 1){
        textsize --;
     }
   }
-  if(drawcount > 175 && drawcount < 300 && (drawcount % 20 == 0 || drawcount % 20 == 1 || drawcount % 20 == 2 || drawcount % 20 == 3 || drawcount % 20 == 4 ||  drawcount % 20 == 5 || drawcount % 20 == 6 || drawcount % 20 == 7 || drawcount % 20 == 8 || drawcount % 20 == 9 || drawcount % 20 == 10 || drawcount % 20 == 11 || drawcount % 20 == 12 || drawcount % 20 == 13)){
+  if(!skipintro && drawcount > 175 && drawcount < 300 && (drawcount % 20 == 0 || drawcount % 20 == 1 || drawcount % 20 == 2 || drawcount % 20 == 3 || drawcount % 20 == 4 ||  drawcount % 20 == 5 || drawcount % 20 == 6 || drawcount % 20 == 7 || drawcount % 20 == 8 || drawcount % 20 == 9 || drawcount % 20 == 10 || drawcount % 20 == 11 || drawcount % 20 == 12 || drawcount % 20 == 13)){
     fill(#B71818);
     stroke(#B71818);
     strokeWeight(10);
@@ -73,7 +82,7 @@ public void draw(){
     textSize(60);
     text("ASTROFROG is VERY FAR from", 500, 300);
     text("his FROGGY HOME PLANET!!", 500, 400);
-  }if(drawcount > 300){
+  }if(!skipintro && drawcount > 300){
     fill(#F5EC36);
     textSize(50);
     text("Help ASTROFROG make his way back!", 500, texty);
@@ -82,7 +91,7 @@ public void draw(){
     text("And enter the WORMHOLE", 500, texty + 300);
     text("to get ASTROFROG home!", 500, texty + 400);
     texty -= 6;
-  }if(drawcount > 540 && drawcount < 575){
+  }if(!skipintro && drawcount > 540 && drawcount < 575){
     stroke(#B71818);
     strokeWeight(10);
     noFill();
@@ -90,7 +99,7 @@ public void draw(){
     fill(#B71818);
     textSize(200);
     text("READY?", 500, 400);
-  }if(drawcount > 585 && drawcount < 610){
+  }if(!skipintro && drawcount > 585 && drawcount < 610){
     stroke(#F5EC36);
     strokeWeight(10);
     noFill();
@@ -98,7 +107,7 @@ public void draw(){
     fill(#F5EC36);
     textSize(200);
     text("SET", 500, 400);
-  }if(drawcount > 620 && drawcount < 645){
+  }if(!skipintro && drawcount > 620 && drawcount < 645){
     stroke(#38D32B);
     strokeWeight(10);
     noFill();
@@ -107,7 +116,7 @@ public void draw(){
     textSize(200);
     text("GO!!", 500, 400);
   }
-  if(drawcount > 650 && level == 1){
+  if((drawcount > 650 || skipintro) && level == 1){
     enemyMove();
     for(int i = 0; i < enemies.size(); i ++){
       enemies.get(i).move();
@@ -613,7 +622,7 @@ public void draw(){
 }
 
 public void keyPressed(){
-  if(keyPressed && drawcount > 650){
+  if(keyPressed && (drawcount > 650 || skipintro)){
    if(key == ' ' && frogBullets.size() <= 10){
      frogBullets.add(user.shoot());
    }
@@ -631,6 +640,14 @@ public void keyPressed(){
      user.moveLeft(); 
     }
    }
+  }
+}
+
+public void mousePressed(){
+  if(mouseButton == LEFT){
+    if(mouseX < 975 && mouseX > 825 && mouseY < 800 && mouseY > 750){
+      skipintro = true;
+    }
   }
 }
 
