@@ -25,3 +25,4 @@ https://docs.google.com/document/d/170Zhcxiy1f5RUTc2yg8nOsAyw1jsenJ-h1eg3fg3TxA/
 6/3/21 - Added a new collide method for the Frog class and added in the asteroids. <br/>
 6/7/21 - Enemies now shoot bullets that kill user when hit. Frog and enemy bullets cancel each other out now. <br/>
 6/8/21 - We now have 5 levels and the game restarts when the Frog loses his three lives. <br/>
+6/9/21 - Fixed some bugs related to the wormhole and the levels. Also increased speed of asteroids as levels increase to increase difficulty. <br/>
