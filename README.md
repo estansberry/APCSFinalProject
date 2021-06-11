@@ -31,3 +31,4 @@ Open SpaceFrogger.pde, hit the play button, and follow in game instructions.
 6/7/21 - Enemies now shoot bullets that kill user when hit. Frog and enemy bullets cancel each other out now. <br/>
 6/8/21 - We now have 5 levels and the game restarts when the Frog loses his three lives. <br/>
 6/9/21 - Fixed some bugs related to the wormhole and the levels. Also increased speed of asteroids as levels increase to increase difficulty. <br/>
+6/10/21 - Increased bullet frequency and number of ships as level increases. Added a game rest message when user loses all their lives and general finishing touches.
