@@ -729,7 +729,7 @@ public void draw(){
 }
 
 public void keyPressed(){
-  if(keyPressed && (drawcount > 650 || skipintro || level != 1)){
+  if(keyPressed && level != 6 &&(drawcount > 650 || skipintro || level != 1)){
    if(key == ' ' && frogBullets.size() <= 4){
      frogBullets.add(user.shoot());
    }
