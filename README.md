@@ -5,7 +5,7 @@ Elizabeth Stansberry and Aidan Fingeret
 <h2> Project Description: </h2>
 A frog stranded in space needs to make his way back to his froggy home planet. The frog avoids asteroids coming from right to left while trying to shoot enemy spaceships. Once all the enemy spaceships he must make his way across the level to get to the wormhole. After the first level the enemy spaceships will start shooting back at the frog. Player will use WASD or arrow movement and use the spacebar to shoot. If the player succeeds in all levels, the frog is reunited with his friends and family on his planet. The player will have three lives for the entire game; if the player dies, by asteroid or enemy fire, the level will restart and the player will lose a life.
 
-<h2>Link to Prototype: </h2>
+<h2>Link to Design Document: </h2>
 https://docs.google.com/document/d/170Zhcxiy1f5RUTc2yg8nOsAyw1jsenJ-h1eg3fg3TxA/edit?usp=sharing
 
 <h2>Compile/Run Instructions: </h2>
