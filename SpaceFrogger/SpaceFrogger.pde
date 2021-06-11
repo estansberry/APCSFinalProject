@@ -5,6 +5,7 @@ ArrayList<FBullet> frogBullets = new ArrayList();
 ArrayList<SBullet> enemyBullets = new ArrayList();
 Wormhole hole = new Wormhole();
 int level = 1;
+boolean reset = false;
 int[] asteroidValues = new int[5];{
  asteroidValues[0] = 400;
  asteroidValues[1] = 450;
@@ -193,13 +194,19 @@ public void draw(){
      enemyBullets = new ArrayList();
      user.hp = 3;
      setup();
+     reset = true;
     }
     if(user.display){
       user.display();
     }
     fill(255);
     textSize(20);
-    text("Level: " + level + "\nLives: " + user.gethp(),50,20);
+    text("Level: " + level + "\nLives: " + user.gethp() + "\nUse WASD or arrow keys to move" + "\nUse spacebar to shoot bullets",10,20);
+    if(reset == true){
+      fill(255,0,0);
+      textSize(40);
+      text("Ran Out Of Lives\nSpaceFrogger Has Reset",500,50);
+    }
     int random = (int)Math.floor(Math.random()*(15-1+1)+1);
     if(random == 1){
      int place = (int)Math.floor(Math.random()*(4-0+1)+0);
@@ -235,6 +242,7 @@ public void draw(){
       }
       else{
        hole.display = true;
+       reset = false;
       }
       if(!asteroids.isEmpty()){
        for(int i = 0; i < asteroids.size(); i++){
@@ -282,13 +290,14 @@ public void draw(){
      enemyBullets = new ArrayList();
      user.hp = 3;
      setup();
+     reset = true;
     }
     if(user.display){
       user.display();
     }
     fill(255);
     textSize(20);
-    text("Level: " + level + "\nLives: " + user.gethp(),50,20);
+    text("Level: " + level + "\nLives: " + user.gethp(),10,20);
     int random = (int)Math.floor(Math.random()*(15-1+1)+1);
     if(random == 1){
      int place = (int)Math.floor(Math.random()*(4-0+1)+0);
@@ -388,13 +397,14 @@ public void draw(){
      enemyBullets = new ArrayList();
      user.hp = 3;
      setup();
+     reset = true;
     }
     if(user.display){
       user.display();
     }
     fill(255);
     textSize(20);
-    text("Level: " + level + "\nLives: " + user.gethp(),50,20);
+    text("Level: " + level + "\nLives: " + user.gethp(),10,20);
     int random = (int)Math.floor(Math.random()*(15-1+1)+1);
     if(random == 1){
      int place = (int)Math.floor(Math.random()*(4-0+1)+0);
@@ -494,13 +504,14 @@ public void draw(){
      enemyBullets = new ArrayList();
      user.hp = 3;
      setup();
+     reset = true;
     }
     if(user.display){
       user.display();
     }
     fill(255);
     textSize(20);
-    text("Level: " + level + "\nLives: " + user.gethp(),50,20);
+    text("Level: " + level + "\nLives: " + user.gethp(),10,20);
     int random = (int)Math.floor(Math.random()*(15-1+1)+1);
     if(random == 1){
      int place = (int)Math.floor(Math.random()*(4-0+1)+0);
@@ -600,13 +611,14 @@ public void draw(){
      enemyBullets = new ArrayList();
      user.hp = 3;
      setup();
+     reset = true;
     }
     if(user.display){
       user.display();
     }
     fill(255);
     textSize(20);
-    text("Level: " + level + "\nLives: " + user.gethp(),50,20);
+    text("Level: " + level + "\nLives: " + user.gethp(),10,20);
     int random = (int)Math.floor(Math.random()*(15-1+1)+1);
     if(random == 1){
      int place = (int)Math.floor(Math.random()*(4-0+1)+0);
@@ -794,6 +806,18 @@ public void keyPressed(){
     if(keyCode == LEFT){
      user.moveLeft(); 
     }
+   }
+   if(key == 'W' || key == 'w'){
+    user.moveUp(); 
+   }
+   if(key == 'S' || key == 's'){
+    user.moveDown(); 
+   }
+   if(key == 'D' || key == 'd'){
+    user.moveRight(); 
+   }
+   if(key == 'A' || key == 'a'){
+    user.moveLeft(); 
    }
   }
 }
