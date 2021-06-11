@@ -18,6 +18,7 @@ public void setup(){
   frameRate(30);
   size(1000,1000); 
   background(#478140);
+  enemymove = 0;
   //Ship to test mechanics
   if(level == 1){
     Ship s0 = new Ship(-2, 1, 0);
@@ -266,7 +267,6 @@ public void draw(){
         asteroids = new ArrayList();
         enemies = new ArrayList();
         frogBullets = new ArrayList();
-        enemymove = 0;
         user.x = 500;
         user.y = 750;
         setup();
@@ -370,7 +370,6 @@ public void draw(){
         user.display = false;
         hole.display = false;
         level++;
-        enemymove = 0;
         asteroids = new ArrayList();
         enemies = new ArrayList();
         frogBullets = new ArrayList();
@@ -478,7 +477,6 @@ public void draw(){
         user.display = false;
         hole.display = false;
         level++;
-        enemymove = 0;
         asteroids = new ArrayList();
         enemies = new ArrayList();
         frogBullets = new ArrayList();
@@ -586,7 +584,6 @@ public void draw(){
         user.display = false;
         hole.display = false;
         level++;
-        enemymove = 0;
         asteroids = new ArrayList();
         enemies = new ArrayList();
         frogBullets = new ArrayList();
@@ -693,7 +690,6 @@ public void draw(){
         asteroids.clear();
         user.display = false;
         hole.display = false;
-        enemymove = 0;
         user.x = 500;
         user.y = 750;
         level++;
