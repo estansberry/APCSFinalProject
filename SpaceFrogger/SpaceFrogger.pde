@@ -791,8 +791,6 @@ public void draw(){
   }Frog fakeuser = new Frog(0, 0);
   fakeuser.display();
   }
-  fill(255);
-  text(String.valueOf(enemymove), 800, 800);
 }
 
 public void keyPressed(){
