@@ -767,7 +767,7 @@ public void draw(){
     textx -= 8;
     textSize(50);
     text("Congratulations! You returned Astrofrog back to his home planet. The frogs on the Froggy Planet are forever indebted to you. Play again soon!", textx, 600);
-  }if(drawcount > 725){
+  }if(drawcounter > 725){
     exit();
   }Frog fakeuser = new Frog(0, 0);
   fakeuser.display();
