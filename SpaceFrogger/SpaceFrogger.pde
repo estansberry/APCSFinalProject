@@ -95,6 +95,8 @@ int frogplace = 350;
 int frogplace1 = 350;
 int frogplace2 = 350;
 int textx = 900;
+int enemymove = 0;
+boolean changing = false;
 
 public void draw(){
   ellipseMode(CENTER);
@@ -808,22 +810,89 @@ public void enemyMove(){
   int size = enemies.size();
   if(size > 0){
     for(int i = 0; i < size; i ++){
-      if(enemies.get(0).getx() < 50 || (enemies.get(0).getx() < 250 && enemies.get(0).gety() > 310)){
-        enemies.get(i).setDX(0);
-        enemies.get(i).setDY(-1.5);
+      if(enemymove == 0 && (enemies.get(0).gety() > 300 || enemies.get(0).getx() < 50)){
+        if(level == 1){
+          enemies.get(i).setDX(0);
+          enemies.get(i).setDY(-1.5);
+        }else if(level == 2){
+          enemies.get(i).setDX(0);
+          enemies.get(i).setDY(-3);
+        }else if(level == 3){
+          enemies.get(i).setDX(0);
+          enemies.get(i).setDY(-4.5);
+        }else if(level == 4){
+          enemies.get(i).setDX(0);
+          enemies.get(i).setDY(-6);
+        }else if(level == 5){
+          enemies.get(i).setDX(0);
+          enemies.get(i).setDY(-7.5);
+        }changing = true;
       }
-      if(enemies.get(size - 1).getx() > 950 || (enemies.get(size - 1).getx() > 750 && enemies.get(size - 1).gety() > 310)){
-       enemies.get(i).setDY(-1.5);
-        enemies.get(i).setDX(0);
+      if(enemymove == 2 && (enemies.get(size - 1).gety() > 300 || enemies.get(size - 1).getx() > 950)){
+        if(level == 1){
+          enemies.get(i).setDY(-1.5);
+          enemies.get(i).setDX(0);
+        }else if(level == 2){
+          enemies.get(i).setDY(-3);
+          enemies.get(i).setDX(0);
+        }else if(level == 3){
+          enemies.get(i).setDY(-4.5);
+          enemies.get(i).setDX(0);
+        }else if(level == 4){
+          enemies.get(i).setDY(-6);
+          enemies.get(i).setDX(0);
+        }else if(level == 5){
+          enemies.get(i).setDY(-6.5);
+          enemies.get(i).setDX(0);
+        }changing = true;
       }
-      if(enemies.get(0).gety() < 50 && enemies.get(0).getx() < 250){
-        enemies.get(i).setDX(3);
-        enemies.get(i).setDY(0.5);
+      if(enemymove == 1 && (enemies.get(0).gety() < 50)){
+        if(level == 1){
+          enemies.get(i).setDX(3);
+          enemies.get(i).setDY(0.5);
+        }else if(level == 2){
+          enemies.get(i).setDX(5);
+          enemies.get(i).setDY(2.5);
+        }else if(level == 3){
+          enemies.get(i).setDX(7);
+          enemies.get(i).setDY(4.5);
+        }else if(level == 4){
+          enemies.get(i).setDX(9);
+          enemies.get(i).setDY(6.5);
+        }else if(level == 5){
+          enemies.get(i).setDX(11);
+          enemies.get(i).setDY(8.5);
+        }changing = true;
+      } 
+      if(enemymove == 3 && enemies.get(0).gety() < 50){
+        if(level == 1){
+          enemies.get(i).setDX(-3);
+          enemies.get(i).setDY(0.5);
+        }else if(level == 2){
+          enemies.get(i).setDX(-5);
+          enemies.get(i).setDY(2.5);
+        }else if(level == 3){
+          enemies.get(i).setDX(-7);
+          enemies.get(i).setDY(4.5);
+        }else if(level == 4){
+          enemies.get(i).setDX(-9);
+          enemies.get(i).setDY(6.5);
+        }else if(level == 5){
+          enemies.get(i).setDX(-11);
+          enemies.get(i).setDY(8.5);
+        }changing = true;
       }
-      if(enemies.get(0).gety() < 50 && enemies.get(size - 1).getx() > 750){
-        enemies.get(i).setDX(-3);
-        enemies.get(i).setDY(0.5);
+    }if(changing){
+      if(enemymove == 0){
+        enemymove = 1;
+      }else if(enemymove == 1){
+        enemymove = 2;
+      }else if(enemymove == 2){
+        enemymove = 3;
+      }else if(enemymove == 3){
+        enemymove = 0;
       }
+      changing = false;
     }
   }
 }
