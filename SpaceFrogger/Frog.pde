@@ -1,6 +1,7 @@
 public class Frog extends Entity{
   public int hp;
   public boolean display;
+  boolean main;
   
   public Frog(float DX,float DY){
    x = 500;
@@ -10,6 +11,18 @@ public class Frog extends Entity{
    radius = 50;
    hp = 3;
    display = true;
+   main = true;
+  }
+  
+  public Frog(int x, int y, float radius){
+   this.x = x;
+   this.y = y;
+   dx = 0;
+   dy = 0;
+   this.radius = radius;
+   hp = 3;
+   display = true;
+   main = false;
   }
   
   public int gethp(){
@@ -75,11 +88,14 @@ public class Frog extends Entity{
     rect(x + bodyRadius/2, y + bodyRadius/2, bodyRadius/1.5, bodyRadius/12);
     rect(x - bodyRadius/2 + 1, y + bodyRadius/2 - 8, bodyRadius/1.5, bodyRadius/12);
     rect(x + bodyRadius/2 - 1, y + bodyRadius/2 - 8, bodyRadius/1.5, bodyRadius/12);
-    //helmet
-    fill(225, 225, 225, 150);
-    stroke(0);
-    ellipse(x, y - bodyRadius/1.75, bodyRadius/.9, bodyRadius/1.1);
+    if(main){
+      //helmet
+      fill(225, 225, 225, 150);
+      stroke(0);
+      ellipse(x, y - bodyRadius/1.75, bodyRadius/.9, bodyRadius/1.1);
+    }
   }
+  
   
   public boolean bulletCollide(ArrayList<SBullet> bullets){
    for(int i = 0; i < bullets.size(); i++){

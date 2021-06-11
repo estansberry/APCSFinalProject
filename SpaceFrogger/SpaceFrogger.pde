@@ -4,7 +4,7 @@ Frog user;
 ArrayList<FBullet> frogBullets = new ArrayList();
 ArrayList<SBullet> enemyBullets = new ArrayList();
 Wormhole hole = new Wormhole();
-int level = 1;
+int level = 6;
 int[] asteroidValues = new int[5];{
  asteroidValues[0] = 400;
  asteroidValues[1] = 450;
@@ -39,6 +39,17 @@ int ellipsey = 400;
 float drawcount = 0;
 int texty = 900;
 int textsize = 50;
+int mainx = 500;
+int mainy = 750;
+int drawcounter = 0;
+int ellipsenextx = 500;
+int ellipsenexty = 400;
+int xsize = 1;
+int ysize = 1;
+int frogplace = 350;
+int frogplace1 = 350;
+int frogplace2 = 350;
+int textx = 900;
 
 public void draw(){
   ellipseMode(CENTER);
@@ -620,7 +631,94 @@ public void draw(){
   }
   if(level == 6){
    //outro 
-   exit();
+   drawcounter ++;
+   if(drawcounter > 10 && drawcounter < 220){
+    fill(#478140);
+    ellipse(ellipsenextx, ellipsenexty, xsize, ysize);
+    xsize += 10;
+    ysize += 10;
+    fill(0);
+    textSize(50);
+    text("FROGGY", (ellipsenextx - 100), ellipsenexty);
+    text("PLANET", (ellipsenextx - 100), (ellipsenexty + 50));
+    if(ellipsenexty < 700){
+      ellipsenexty += 6;
+    }
+   }if(drawcounter > 175){
+    background(#478140);
+    for(int i = 0; i < 200; i ++){
+      stroke(#6B9371);
+      fill(#6B9371);
+      ellipse((int) (Math.random()*1000), (int) (Math.random()*370),20, 20);
+    }
+    stroke(#4D3010);
+    fill(#4D3010);
+    rect(180, frogplace2 - 15, 5, 70);
+    rect(320, frogplace - 15, 5, 90);
+    rect(480, frogplace1 - 10, 5, 80);
+    rect(710, frogplace2 - 15, 5, 85);
+    rect(815, frogplace - 15, 5, 70);
+    Frog frog1 = new Frog(200, frogplace2 + 15, 75);
+    frog1.display();
+    Frog frog2 = new Frog(300, frogplace, 100);
+    frog2.display();
+    Frog frog3 = new Frog(500, frogplace1, 85);
+    frog3.display();
+    Frog frog4 = new Frog(725, frogplace2, 95);
+    frog4.display();
+    Frog frog5 = new Frog(800, frogplace + 15, 75);
+    frog5.display();
+    stroke(0);
+    strokeWeight(8);
+    fill(255);
+    if(0 <= drawcounter % 51 && drawcounter % 51 < 17){
+      rect(200, 300, 110, 50);
+      rect(800, 300, 110, 50);
+      rect(500, 275, 500, 50);
+      fill(0);
+      textSize(40);
+      text("WEL", 170, 315);
+      textSize(45);
+      text("COME   HOME   ASTRO", 256, 290);
+      textSize(35);
+      text("FROG", 756, 316);
+      frogplace ++;
+      frogplace2 --;
+    }if(17 <= drawcounter % 51 && drawcounter % 51 < 34){
+      rect(200, 300, 110, 50);
+      rect(800, 300, 110, 50);
+      rect(500, 285, 500, 50);
+      fill(0);
+      textSize(40);
+      text("WEL", 170, 315);
+      textSize(45);
+      text("COME   HOME   ASTRO", 256, 300);
+      textSize(35);
+      text("FROG", 756, 316);
+      frogplace1 --;
+      frogplace2 ++;
+    }if(34 <= drawcounter % 51 && drawcounter % 51 <= 54){
+      rect(200, 310, 110, 50);
+      rect(800, 310, 110, 50);
+      rect(500, 275, 500, 50);
+      fill(0);
+      textSize(40);
+      text("WEL", 170, 325);
+      textSize(45);
+      text("COME   HOME   ASTRO", 256, 290);
+      textSize(35);
+      text("FROG", 756, 326);
+      frogplace --;
+      frogplace1 ++;
+    }
+  }if(drawcounter > 200){
+    textx -= 8;
+    textSize(50);
+    text("Congratulations! You returned Astrofrog back to his home planet. The frogs on the Froggy Planet are forever indebted to you. Play again soon!", textx, 600);
+  }if(drawcount > 725){
+    exit();
+  }user.display();
+  text(String.valueOf(drawcounter), 800, 800); 
   }
 }
 
