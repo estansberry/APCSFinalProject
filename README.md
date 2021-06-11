@@ -8,7 +8,7 @@ A frog stranded in space needs to make his way back to his froggy home planet. T
 Link to Prototype:
 https://docs.google.com/document/d/170Zhcxiy1f5RUTc2yg8nOsAyw1jsenJ-h1eg3fg3TxA/edit?usp=sharing
 
-<h2> Elizabeth's Deadlog: <br/> </h2>
+<h2> Elizabeth's Development log: <br/> </h2>
 5/24/21 - I created all of the classes and individual files, basically just the skeleton of the program, and then I added a few new methods that we discussed in class. <br/>
 5/26/21 - I wrote the code for the frog's basic appearance and wrote a loop to add stars to the background. <br/>
 5/28/21 - I fixed an issue with the background <br/>
@@ -16,7 +16,7 @@ https://docs.google.com/document/d/170Zhcxiy1f5RUTc2yg8nOsAyw1jsenJ-h1eg3fg3TxA/
 6/3/21 - I added limits to the movement of the frog, added the wormhole design, added design fixes for the asteroids, and coded the movement of the Alien spaceships. <br/>
 6/7/21 - I added the intro story that sets up the game. </br>
 
-<h2> Aidan's Deadlog: <br/> </h2>
+<h2> Aidan's Development log: <br/> </h2>
 5/24/21 - I created the constructors for each of the classes and then wrote some barebones code for the move methods in each class. <br/>
 5/26/21 - I updated all the double variables to float and starting working on the SpaceFrogger code: I instantiated some ArrayLists for the different classes, wrote the keyPressed method, and starting working on the setup and draw methods.  <br/>
 5/28/21 - Made entity an abstract class, fixed keyPressed, cleaned up Frog constructor and display variable names, and changed move methods to use dx and dy. <br/>
