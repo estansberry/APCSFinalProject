@@ -266,6 +266,7 @@ public void draw(){
         asteroids = new ArrayList();
         enemies = new ArrayList();
         frogBullets = new ArrayList();
+        enemymove = 0;
         user.x = 500;
         user.y = 750;
         setup();
@@ -369,6 +370,7 @@ public void draw(){
         user.display = false;
         hole.display = false;
         level++;
+        enemymove = 0;
         asteroids = new ArrayList();
         enemies = new ArrayList();
         frogBullets = new ArrayList();
@@ -476,6 +478,7 @@ public void draw(){
         user.display = false;
         hole.display = false;
         level++;
+        enemymove = 0;
         asteroids = new ArrayList();
         enemies = new ArrayList();
         frogBullets = new ArrayList();
@@ -583,6 +586,7 @@ public void draw(){
         user.display = false;
         hole.display = false;
         level++;
+        enemymove = 0;
         asteroids = new ArrayList();
         enemies = new ArrayList();
         frogBullets = new ArrayList();
@@ -689,6 +693,7 @@ public void draw(){
         asteroids.clear();
         user.display = false;
         hole.display = false;
+        enemymove = 0;
         user.x = 500;
         user.y = 750;
         level++;
@@ -786,6 +791,8 @@ public void draw(){
   }Frog fakeuser = new Frog(0, 0);
   fakeuser.display();
   }
+  fill(255);
+  text(String.valueOf(enemymove), 800, 800);
 }
 
 public void keyPressed(){
