@@ -202,6 +202,7 @@ public void draw(){
     }
     fill(255);
     textSize(20);
+    textAlign(LEFT);
     text("Level: " + level + "\nLives: " + user.gethp() + "\nUse WASD or arrow keys to move" + "\nUse spacebar to shoot bullets",10,20);
     if(reset == true){
       fill(255,0,0);
