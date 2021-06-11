@@ -8,7 +8,7 @@ A frog stranded in space needs to make his way back to his froggy home planet. T
 <h2>Link to Prototype: </h2>
 https://docs.google.com/document/d/170Zhcxiy1f5RUTc2yg8nOsAyw1jsenJ-h1eg3fg3TxA/edit?usp=sharing
 
-<h2>Compile and Run Instructions: </h2>
+<h2>Compile/Run Instructions: </h2>
 Open SpaceFrogger.pde in Processing, hit the play button, and follow in game instructions.
 
 <h2> Elizabeth's Development log: <br/> </h2>
