@@ -197,7 +197,7 @@ public void draw(){
     }
     fill(255);
     textSize(20);
-    text("Level: " + level + "\nLives: " + user.gethp(),50,20);
+    text("Level: " + level + "\nLives: " + user.gethp() + "\nUse WASD or arrow keys to move" + "\nUse spacebar to shoot bullets",50,20);
     int random = (int)Math.floor(Math.random()*(15-1+1)+1);
     if(random == 1){
      int place = (int)Math.floor(Math.random()*(4-0+1)+0);
@@ -792,6 +792,18 @@ public void keyPressed(){
     if(keyCode == LEFT){
      user.moveLeft(); 
     }
+   }
+   if(key == 'W' || key == 'w'){
+    user.moveUp(); 
+   }
+   if(key == 'S' || key == 's'){
+    user.moveDown(); 
+   }
+   if(key == 'D' || key == 'd'){
+    user.moveRight(); 
+   }
+   if(key == 'A' || key == 'a'){
+    user.moveLeft(); 
    }
   }
 }
