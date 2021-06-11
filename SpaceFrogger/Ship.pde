@@ -10,9 +10,6 @@ public class Ship extends Entity{
    colliding = false;
   }
   
-  public void shoot(){
-  }
-  
   public void setDX(float num){
     dx = num;
   }
