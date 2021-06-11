@@ -4,7 +4,7 @@ Frog user = new Frog(10,10);
 ArrayList<FBullet> frogBullets = new ArrayList();
 ArrayList<SBullet> enemyBullets = new ArrayList();
 Wormhole hole = new Wormhole();
-int level = 6;
+int level = 1;
 int[] asteroidValues = new int[5];{
  asteroidValues[0] = 400;
  asteroidValues[1] = 450;
@@ -326,7 +326,7 @@ public void draw(){
         }
        }
       }
-       random = (int)Math.floor(Math.random()*(10-1+1)+1);
+       random = (int)Math.floor(Math.random()*(13-1+1)+1);
        if(random == 1 && !enemies.isEmpty()){
         int place = (int)Math.floor(Math.random()*((enemies.size()-1)-0+1)+0);
         float randomY = enemies.get(place).gety();
@@ -432,7 +432,7 @@ public void draw(){
         }
        }
       }
-       random = (int)Math.floor(Math.random()*(10-1+1)+1);
+       random = (int)Math.floor(Math.random()*(11-1+1)+1);
        if(random == 1 && !enemies.isEmpty()){
         int place = (int)Math.floor(Math.random()*((enemies.size()-1)-0+1)+0);
         float randomY = enemies.get(place).gety();
@@ -538,7 +538,7 @@ public void draw(){
         }
        }
       }
-       random = (int)Math.floor(Math.random()*(10-1+1)+1);
+       random = (int)Math.floor(Math.random()*(9-1+1)+1);
        if(random == 1 && !enemies.isEmpty()){
         int place = (int)Math.floor(Math.random()*((enemies.size()-1)-0+1)+0);
         float randomY = enemies.get(place).gety();
@@ -644,7 +644,7 @@ public void draw(){
         }
        }
       }
-       random = (int)Math.floor(Math.random()*(10-1+1)+1);
+       random = (int)Math.floor(Math.random()*(7-1+1)+1);
        if(random == 1 && !enemies.isEmpty()){
         int place = (int)Math.floor(Math.random()*((enemies.size()-1)-0+1)+0);
         float randomY = enemies.get(place).gety();
