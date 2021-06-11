@@ -9,7 +9,7 @@ A frog stranded in space needs to make his way back to his froggy home planet. T
 https://docs.google.com/document/d/170Zhcxiy1f5RUTc2yg8nOsAyw1jsenJ-h1eg3fg3TxA/edit?usp=sharing
 
 <h2>Run Instructions: </h2>
-Open SpaceFrogger.pde, hit the play button, and follow in game instructions.
+Open SpaceFrogger.pde in Processing, hit the play button, and follow in game instructions.
 
 <h2> Elizabeth's Development log: <br/> </h2>
 5/24/21 - I created all of the classes and individual files, basically just the skeleton of the program, and then I added a few new methods that we discussed in class. <br/>
