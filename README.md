@@ -18,8 +18,8 @@ Open SpaceFrogger.pde in Processing, hit the play button, and follow in game ins
 5/31/21 - I made a fix with the instantiation of our ArrayLists, and added the code for the design of the Alien spaceship. <br/>
 6/3/21 - I added limits to the movement of the frog, added the wormhole design, added design fixes for the asteroids, and coded the movement of the Alien spaceships. <br/>
 6/7/21 - I added the intro story that sets up the game. </br>
-6/9/21 - I added a skip intro button, changed the intro, and changed the ship colors per level </br>
-6/10/21 - I added the ending story, changed the movement and speed of the ships by level. </br>
+6/9/21 - I added a skip intro button, changed the intro, changed the ship colors per level, and fixed other bugs. </br>
+6/10/21 - I added the ending story, changed the movement, speed of the ships by level, and fixed other bugs. </br>
 
 <h2> Aidan's Development log: <br/> </h2>
 5/24/21 - I created the constructors for each of the classes and then wrote some barebones code for the move methods in each class. <br/>
