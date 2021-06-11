@@ -18,16 +18,62 @@ public void setup(){
   size(1000,1000); 
   background(#478140);
   //Ship to test mechanics
-  Ship s0 = new Ship(-2, 1, 0);
-  Ship s1 = new Ship(-2, 1, 1);
-  Ship s2 = new Ship(-2, 1, 2);
-  Ship s3 = new Ship(-2, 1, 3);
-  Ship s4 = new Ship(-2, 1, 4);
-  enemies.add(s0);
-  enemies.add(s1);
-  enemies.add(s2);
-  enemies.add(s3);
-  enemies.add(s4);
+  if(level == 1){
+    Ship s0 = new Ship(-2, 1, 0);
+    Ship s1 = new Ship(-2, 1, 1);
+    Ship s2 = new Ship(-2, 1, 2);
+    Ship s3 = new Ship(-2, 1, 3);
+    Ship s4 = new Ship(-2, 1, 4);
+    enemies.add(s0);
+    enemies.add(s1);
+    enemies.add(s2);
+    enemies.add(s3);
+    enemies.add(s4);
+  }else if(level == 2){
+    Ship s0 = new Ship(-4, 2, 0);
+    Ship s1 = new Ship(-4, 2, 1);
+    Ship s2 = new Ship(-4, 2, 2);
+    Ship s3 = new Ship(-4, 2, 3);
+    Ship s4 = new Ship(-4, 2, 4);
+    enemies.add(s0);
+    enemies.add(s1);
+    enemies.add(s2);
+    enemies.add(s3);
+    enemies.add(s4);
+  }else if(level == 3){
+    Ship s0 = new Ship(-6, 3, 0);
+    Ship s1 = new Ship(-6, 3, 1);
+    Ship s2 = new Ship(-6, 3, 2);
+    Ship s3 = new Ship(-6, 3, 3);
+    Ship s4 = new Ship(-6, 3, 4);
+    enemies.add(s0);
+    enemies.add(s1);
+    enemies.add(s2);
+    enemies.add(s3);
+    enemies.add(s4);
+  }else if(level ==4){
+    Ship s0 = new Ship(-8, 4, 0);
+    Ship s1 = new Ship(-8, 4, 1);
+    Ship s2 = new Ship(-8, 4, 2);
+    Ship s3 = new Ship(-8, 4, 3);
+    Ship s4 = new Ship(-8, 4, 4);
+    enemies.add(s0);
+    enemies.add(s1);
+    enemies.add(s2);
+    enemies.add(s3);
+    enemies.add(s4);
+  }else if(level == 5){
+    Ship s0 = new Ship(-10, 5, 0);
+    Ship s1 = new Ship(-10, 5, 1);
+    Ship s2 = new Ship(-10, 5, 2);
+    Ship s3 = new Ship(-10, 5, 3);
+    Ship s4 = new Ship(-10, 5, 4);
+    enemies.add(s0);
+    enemies.add(s1);
+    enemies.add(s2);
+    enemies.add(s3);
+    enemies.add(s4);
+  }
   //user.display();
   hole = new Wormhole();
 }
@@ -724,7 +770,6 @@ public void draw(){
   }if(drawcount > 725){
     exit();
   }user.display();
-  text(String.valueOf(drawcounter), 800, 800); 
   }
 }
 
